@@ -1,12 +1,93 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
-  </head>
-  <body>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Седона</title>
+  <link href="css/style.css" rel="stylesheet"> </head>
 
-  </body>
+<body>
+  <header class="page-header">
+    <nav class="main-nav">
+      <ul class="main-nav__list">
+        <li class="main-nav__item main-nav__item--active"><a class="main-nav__link">главная</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="photo.html">фото и видео</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="form.html">форма отзыва</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru">html academy</a></li>
+      </ul>
+      <button class="main-nav__close" type="button">Закрыть меню</button>
+      <button class="main-nav__open" type="button">Открыть меню</button>
+    </nav>
+    <div class="logo">
+      <a class="logo__link" title="Sedona"><img src="http://placehold.it/102x83" alt="Sedona" width="102" height="83"></a>
+    </div>
+  </header>
+  <section class="cover">
+    <div class="cover__img-block"> </div>
+    <div class="cover__inner">
+      <h1 class="cover__title">седона &#8211; небольшой  городок в аризоне,  заслуживающий большего!</h1>
+      <p class="cover__description">рассмотрим 5 причин, по которым седона круче чем гранд каньон!</p>
+    </div>
+  </section>
+  <section class="features">
+    <div class="features__inner">
+      <h2 class="features__title">настоящий городок</h2> <span>— №1 —</span>
+      <p class="features__description">седона не аттракцион для туристов, там течет своя жизнь</p>
+    </div> <img class="features__img" src="http://placehold.it/800x400" alt="Настоящий городок" width="800" height="400"> </section>
+  <section class="recommendations">
+    <div class="recommendation__wrap">
+      <div class="recommendation__item recommendation__item--home">
+        <h3 class="recommendation__title">жилье</h3>
+        <p class="recommendation__description">рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+      </div>
+      <div class="recommendation__item recommendation__item--gifts">
+        <h3 class="recommendation__title">сувениры</h3>
+        <p class="recommendation__description">не только китайского, но и местного производства!</p>
+      </div>
+      <div class="recommendation__item recommendation__item--food">
+        <h3 class="recommendation__title">еда</h3>
+        <p class="recommendation__description">всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+      </div>
+    </div>
+  </section>
+  <section class="features">
+    <div class="features__wrap">
+      <h2 class="features__title">там есть мост дьявола</h2> <span>— №2 —</span>
+      <p class="features__description">да, по нему можно пройтись! если вы осмелитесь, конечно</p>
+    </div> <img class="features__img" src="http://placehold.it/800x400" alt="Мост дьявола" width="800" height="400"> </section>
+  <section class="advantages">
+    <div class="advantages__item">
+      <h2 class="advantages__title">небольшая площадь</h2> <span>— №3 —</span>
+      <p class="advantages__description">все интересные места находятся очень близко</p>
+    </div>
+    <div class="advantages__item">
+      <h2 class="advantages__title">красивая дорога</h2> <span>— №4 —</span>
+      <p class="advantages__description">ехать в седону из лас-вегаса совсем не скучно</p>
+    </div>
+    <div class="advantages__item">
+      <h2 class="advantages__title">мало туристов</h2> <span>— №5 —</span>
+      <p class="advantages__description">большинство едет в гранд каньон и толпится там</p>
+    </div>
+  </section>
+  <section class="book">
+    <h3 class="book__title">заинтересовались?</h3>
+    <p class="book__description">укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+    <button class="btn book__btn">найти гостиницу</button>
+  </section>
+  <section class="map">
+    <iframe class="map__img" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3381007.614354739!2d-114.17492744944197!3d34.152347533041976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b08ebcb4c186b%3A0x423927b17fc1cd71!2z0JDRgNC40LfQvtC90LAsINCh0KjQkA!5e0!3m2!1sru!2sru!4v1497569079986" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </section>
+  <footer class="page-footer">
+    <div class="hashtag">#visitsedona</div>
+    <div class="social-btn">
+      <a class="social-btn__link social-btn__link--twitter" href="#"> </a>
+      <a class="social-btn__link social-btn__link--fb" href="#"> </a>
+      <a class="social-btn__link social-btn__link--youtube" href="#"> </a>
+    </div>
+    <div class="copyright"><span>разработано</span>
+      <a class="copyright__link" href="https://htmlacademy.ru/"><img class="copyright__img" src="http://placehold.it/27x34" width="27" height="34" alt="html-academy"></a>
+    </div>
+  </footer>
+</body>
+
 </html>
