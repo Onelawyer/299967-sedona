@@ -1,0 +1,80 @@
+    .main-nav {
+      position: relative;
+      text-align: center;
+      &__link {
+        .font-title();
+        color: @white-color;
+        text-align: center;
+      }
+      &__list {
+        .content-padding();
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        background-color: @main-bg;
+        & li {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 55px;
+          box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.35), 0px 1px 0px rgba(255, 255, 255, 0.5);
+        }
+      }
+      &__link {
+        text-decoration: none;
+      }
+      &--closed .main-nav__list {
+        display: none;
+      }
+      &--opened .main-nav__list {
+        display: block;
+      }
+      &__toggle {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        display: block;
+        width: 70px;
+        height: 50px;
+        font-size: 0;
+        cursor: pointer;
+        border: none;
+        background: none;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 25px;
+          left: 26px;
+          width: 25px;
+          height: 4px;
+          background-color: #ffffff;
+          transform: rotate(45deg);
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          top: 25px;
+          left: 26px;
+          width: 25px;
+          height: 4px;
+          background-color: #ffffff;
+          transform: rotate(135deg);
+        }
+      }
+      &__wrap {
+        display: flex;
+        position: relative;
+        height: 55px;
+      }
+      &__btn {
+        margin-left: 277px;
+        background: none;
+        border: none;
+        margin-top: 12px;
+        margin-bottom: 15px;
+      }
+      &__btn svg {
+        fill: #81b3d2;
+      }
+    }

@@ -1,0 +1,115 @@
+.review {
+  &__item {
+    border: none;
+    .separator();
+    padding: 0;
+    margin: 0;
+  }
+  &__inner {
+    .flex();
+    .content-padding();
+    flex-basis: 280px;
+  }
+  &__inner--contacts {
+    position: relative;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  &__inner--contacts label {
+    margin-bottom: 15px;
+  }
+  &__inner--impression {
+    margin-bottom: 15px;
+  }
+  &__inner--impression:last-child {
+    margin-bottom: 25px;
+  }
+  &__inner--places {
+    flex-basis: auto;
+    margin-bottom: 25px;
+  }
+  &__inner--personality {
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  &__inner--email {
+    margin-bottom: 25px;
+  }
+  &__input {
+    flex-grow: 1;
+    padding-left: 20px;
+  }
+  &__input--personality {
+    width: 192px;
+    .font-title();
+    text-transform: none;
+    height: 58px;
+    margin-left: 20px;
+    box-sizing: border-box;
+  }
+  &__input--contacts {
+    width: 280px;
+    position: relative;
+    .font-title();
+    text-transform: none;
+    padding-right: 70px;
+    height: 58px;
+    border: none;
+    background: #f2f2f2;
+    box-sizing: border-box;
+  }
+  &__label-radio,
+  &__label-checkbox {
+    .font-title();
+    text-transform: none;
+  }
+  &__title {
+    width: 100%;
+    .font-title();
+    text-align: center;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    margin-bottom: 25px;
+  }
+  &__label {
+    .font-text();
+  }
+  &__label--tel::before {
+    content: "";
+    position: absolute;
+    top: 41px;
+    left: 242px;
+    width: 58px;
+    height: 58px;
+    background: url(/img/icon-phone.svg) #e6e6e6 no-repeat;
+    background-position: center;
+    z-index: 100;
+  }
+  &__label--email::before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 242px;
+    width: 58px;
+    height: 58px;
+    background: url(/img/icon-mail.svg) #e6e6e6 no-repeat;
+    background-position: center;
+    z-index: 100;
+  }
+  &__btn {
+    .button ();
+    margin-bottom: 40px;
+  }
+  &__comment {
+    margin-bottom: 50px;
+    border: none;
+  }
+  &__comment textarea {
+    width: 100%;
+    .font-title();
+    text-transform: none;
+    .content-padding();
+    box-sizing: border-box;
+  }
+}

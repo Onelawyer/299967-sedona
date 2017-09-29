@@ -1,0 +1,35 @@
+  .features {
+    &__wrap {
+      background-color: @main-bg;
+      .content-padding();
+      text-align: center;
+      padding-bottom: 45px;
+      padding-top: 45px;
+    }
+    &__title {
+      .font-title();
+      color: @white-color;
+      margin-top: 22px;
+      margin-bottom: 7px;
+    }
+    &__description,
+    &__wrap span {
+      .font-text();
+      color: @white-color;
+    }
+    &__description {
+      margin-bottom: 45px;
+      margin-top: 14px;
+      line-height: 21px;
+    }
+    &__wrap span {
+      line-height: 24px;
+    }
+    &__wrap p {
+      margin-bottom: 0;
+    }
+    &__img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
