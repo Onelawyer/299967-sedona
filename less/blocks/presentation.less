@@ -1,24 +1,30 @@
 .presentation {
   margin-bottom: 100px;
+
   &__title {
     .font-title();
   }
+
   &__description {
     .font-text();
   }
+
   &__inner-wrap {
     .content-padding();
     text-align: center;
   }
+
   &__player {
     position: relative;
   }
+
   &__toolbar {
     width: 280px;
     position: absolute;
     left: 20px;
     bottom: -65px;
   }
+
   &__tools {
     .flex();
     justify-content: space-around;
@@ -27,26 +33,32 @@
     height: 65px;
     background-color: #f2f2f2;
   }
+
   &__btn {
     border: none;
     background: none;
   }
+
   &__btn--subtitles {
     margin-left: auto;
   }
+
   &__btn--replay {
     margin-left: 25px;
   }
+
   &__btn--fullscreen {
     margin-right: 25px;
     margin-left: 25px;
   }
+
   &__scale {
     position: relative;
     width: auto;
     height: 45px;
     background-color: @black-color-opacity;
   }
+
   &__scale::before {
     content: "";
     position: absolute;
@@ -56,6 +68,7 @@
     height: 3px;
     background-color: @white-color;
   }
+
   &__scale::after {
     content: "";
     position: absolute;

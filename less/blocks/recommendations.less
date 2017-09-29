@@ -3,39 +3,47 @@
   text-align: left;
   padding-top: 13px;
   margin-bottom: 40px;
+
   &__title {
     .font-title();
     margin-bottom: 15px;
   }
+
   &__description {
     .font-text();
     margin-bottom: 28px;
     line-height: 21px;
   }
+
   &__wrap {
     padding-left: 50px;
   }
+
   &__item {
     position: relative;
   }
+
   &__item::before {
     content: "";
     position: absolute;
     width: 50px;
     height: 50px;
   }
+
   &__item--home::before {
     background: url(/img/icon-house.svg)no-repeat;
     left: -50px;
     top: -10px;
     background-size: auto 38px;
   }
+
   &__item--gifts::before {
     background: url(/img/icon-gift.svg)no-repeat;
     left: -45px;
     top: -12px;
     background-size: auto 40px;
   }
+
   &__item--food::before {
     background: url(/img/icon-burger.svg)no-repeat;
     background-size: auto 36px;
