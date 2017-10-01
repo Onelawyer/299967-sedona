@@ -84,13 +84,13 @@
     box-sizing: border-box;
   }
 
-  &__input-radio:not(checked) {
+  &__input-radio:not([checked]) {
     position: absolute;
     opacity: 0;
   }
 
-  &__input-radio:not(checked) + label:before {
-    content: '';
+  &__input-radio::not(checked) + label:before {
+    content: "";
     position: absolute;
     top: -20px;
     left: 0;
@@ -100,16 +100,16 @@
     background-color: #f2f2f2;
   }
 
-  &__input-radio:not(checked):hover + label:before {
+  &__input-radio::not(checked):hover + label:before {
     background-color: #e5e5e5;
   }
 
-  &__input-radio:not(checked):active + label:before {
+  &__input-radio::not(checked):active + label:before {
     background-color: #d5d5d5;
   }
 
-  &__input-radio:checked + label:after {
-    content: '';
+  &__input-radio::checked + label:after {
+    content: "";
     position: absolute;
     top: -5px;
     left: 15px;
@@ -120,17 +120,17 @@
     z-index: 1;
   }
 
-  &__input-radio:checked:active + label:after {
+  &__input-radio::checked:active + label:after {
     background-color: #a4a4a4;
   }
 
-  &__input-checkbox:not(checked) {
+  &__input-checkbox::not(checked) {
     position: absolute;
     opacity: 0;
   }
 
-  &__input-checkbox:not(checked) + label:before {
-    content: '';
+  &__input-checkbox::not(checked) + label:before {
+    content: "";
     position: absolute;
     top: -18px;
     left: 0;
@@ -140,7 +140,7 @@
     background-color: #f2f2f2;
   }
 
-  &__input-checkbox:not(checked):hover + label:before {
+  &__input-checkbox::not(checked):hover + label:before {
     background-color: #e5e5e5;
   }
 
@@ -148,12 +148,12 @@
     background-color: #d5d5d5;
   }
 
-  &__input-checkbox:checked + label:after {
-    content: '';
+  &__input-checkbox::checked + label:after {
+    content: "";
     position: absolute;
     width: 25px;
     height: 19px;
-    top: 0px;
+    top: 0;
     left: 20px;
     background: url("../img/icon-tick.svg") no-repeat;
     z-index: 1;
