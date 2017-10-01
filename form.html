@@ -2,109 +2,151 @@
 <html lang="ru">
 
 <head>
-  <meta charset="utf-8">
-  <title>HTML Academy: Седона</title>
-  <link href="css/style.css" rel="stylesheet"> </head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>HTML Academy: Седона</title>
+    <link href="css/style.css" rel="stylesheet"> </head>
 
 <body>
-  <header class="page-header">
-    <nav class="main-nav">
-      <ul class="main-nav__list">
-        <li class="main-nav__item"><a class="main-nav__link">главная</a></li>
-        <li class="main-nav__item"><a class="main-nav__link" href="photo.html">фото и видео</a></li>
-        <li class="main-nav__item main-nav__item--active"><a class="main-nav__link" href="form.html">форма отзыва</a></li>
-        <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru">html academy</a></li>
-      </ul>
-      <button class="main-nav__close" type="button">Закрыть меню</button>
-    </nav>
-    <button class="main-nav__open" type="button">Открыть меню</button>
-    <div class="logo">
-      <a class="logo__link" title="Sedona"><img src="http://placehold.it/102x83" alt="Sedona" width="102" height="83"></a>
-    </div>
-  </header>
-  <section class="cover cover--form">
-    <div class="cover__img-block cover__img-block--form"> <img class="cover__text cover__text--form" src="#" alt="Sedona"> </div>
-    <div class="cover__inner cover__inner--form">
-      <h1 class="cover__title cover__title--form">оставьте свой отзыв</h1>
-      <p class="cover__description cover__description--form">помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
-    </div>
-  </section>
-  <form class="review" action="https://echo.htmlacademy.ru/" method="get">
-    <fieldset class="review__item review__item--personality">
-      <legend class="review__title">представьтесь</legend>
-      <div class="review__inner review__inner--personality">
-        <label class="review__label" for="id__name">Имя</label>
-        <input class="review__input review__input--personality" type="text" name="name" id="id__name" placeholder="Петр" required> </div>
-      <div class="review__inner review__inner--personality">
-        <label class="review__label" for="id__surname">Фамилия</label>
-        <input class="review__input review__input--personality" type="text" name="surname" id="id__surname" placeholder="Иванов" required> </div>
-      <div class="review__inner review__inner--personality">
-        <label class="review__label" for="id__patronymic">Отчество</label>
-        <input class="review__input review__input--personality" type="text" name="patronymic" id="id__patronymic" placeholder="Александрович"> </div>
-    </fieldset>
-    <fieldset class="review__item review__item--contacts">
-      <legend class="review__title">контактная информация</legend>
-      <div class="review__contacts-wrap">
-        <div class="review__inner review__inner--contacts review__inner--tel">
-          <label class="review__label review__label--tel" for="tel"><span>контактный</span> телефон:</label>
-          <input class="review__input review__input--contacts" type="tel" name="tel" id="tel" placeholder="Введите телефон" required> </div>
-        <div class="review__inner review__inner--contacts review__inner--email">
-          <label class="review__label review__label--email" for="email">электронная почта:</label>
-          <input class="review__input review__input--contacts" type="email" name="email" id="email" placeholder="Введите e-mail" required> </div>
-      </div>
-    </fieldset>
-    <fieldset class="review__item review__item--impression">
-      <legend class="review__title">ваше общее впечатление:</legend>
-      <div class="review__inner review__inner--impression">
-        <label class="review__label-radio">
-          <input class="review__input-radio review__input-radio--checked" type="radio" name="impression" value="скорее положительное" checked>Скорее положительное</label>
-      </div>
-      <div class="review__inner review__inner--impression">
-        <label class="review__label-radio">
-          <input class="review__input-radio" type="radio" name="impression" value="скорее отрицательное">Cкорее отрицательное</label>
-      </div>
-      <div class="review__inner review__inner--impression">
-        <label class="review__label-radio">
-          <input class="review__input-radio" type="radio" name="impression" value="затрудняюсь ответить">Затрудняюсь ответить</label>
-      </div>
-    </fieldset>
-    <fieldset class="review__item review__item--places">
-      <legend class="review__title">Посещенные достопримечательности:</legend>
-      <div class="review__places-wrap">
-        <div class="review__inner review__inner--places">
-          <label class="review__label-checkbox">
-            <input class="review__input-checkbox review__input-checkbox--checked" type="checkbox" name="Слайдер" checked>Мост дьявола</label>
+    <header class="page-header">
+        <nav class="main-nav main-nav--nojs">
+            <ul class="main-nav__list">
+                <li class="main-nav__item main-nav__item--active"><a class="main-nav__link" href="index.html">главная</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="photo.html">фото и видео</a></li>
+                <li class="main-nav__item main-nav__item--active"><a class="main-nav__link" href="#">форма отзыва</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru">html academy</a></li>
+            </ul>
+            <button class="main-nav__toggle" type="button">Закрыть меню</button>
+        </nav>
+        <div class="main-nav__wrap">
+            <button class="main-nav__btn" type="button">
+                <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22.928px" height="21.982px" viewBox="0 0 22.928 21.982" enable-background="new 0 0 22.928 21.982" xml:space="preserve">
+                    <g>
+                        <rect width="22.928" height="3.964" />
+                        <rect y="9.009" width="22.928" height="3.964" />
+                        <rect y="18.018" width="22.928" height="3.964" /> </g>
+                </svg>
+            </button>
+            <div class="logo">
+                <a class="logo__link" title="Sedona"><img class="logo__img" src="img/logo-sedona-mobile.svg" alt="Sedona" width="102" height="83"></a>
+            </div>
         </div>
-        <div class="review__inner review__inner--places">
-          <label class="review__label-checkbox">
-            <input class="review__input-checkbox review__input-checkbox--checked" type="checkbox" name="Слайдер" checked>Слайд парк</label>
+    </header>
+    <section class="cover cover--form">
+        <div class="cover__img-block cover__img-block--form"> <img class="cover__text cover__text--form" src="img/text-sedona.svg" alt="Sedona"> </div>
+        <div class="cover__wrap cover__wrap--form">
+            <h1 class="cover__title cover__title--form">оставьте свой отзыв</h1>
+            <p class="cover__description cover__description--form">помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         </div>
-        <div class="review__inner review__inner--places">
-          <label class="review__label-checkbox">
-            <input class="review__input-checkbox" type="checkbox" name="Слайдер">Гора-колокол</label>
+    </section>
+    <form class="review" action="https://echo.htmlacademy.ru/" method="get">
+        <fieldset class="review__item review__item--personality">
+            <legend class="review__title">представьтесь</legend>
+            <div class="review__inner review__inner--personality">
+                <label class="review__label" for="id__name">Имя</label>
+                <input class="review__input review__input--personality" type="text" name="name" id="id__name" placeholder="Петр" required> </div>
+            <div class="review__inner review__inner--personality">
+                <label class="review__label" for="id__surname">Фамилия</label>
+                <input class="review__input review__input--personality" type="text" name="surname" id="id__surname" placeholder="Иванов" required> </div>
+            <div class="review__inner review__inner--personality">
+                <label class="review__label" for="id__patronymic">Отчество</label>
+                <input class="review__input review__input--personality" type="text" name="patronymic" id="id__patronymic" placeholder="Александрович"> </div>
+        </fieldset>
+        <fieldset class="review__item review__item--contacts">
+            <legend class="review__title">контактная информация</legend>
+            <div class="review__contacts-wrap">
+                <div class="review__inner review__inner--contacts review__inner--tel">
+                    <label class="review__label review__label--tel" for="tel"><span>контактный</span> телефон:</label>
+                    <input class="review__input review__input--contacts" type="tel" name="tel" id="tel" placeholder="Введите телефон" required> </div>
+                <div class="review__inner review__inner--contacts review__inner--email">
+                    <label class="review__label review__label--email" for="email">электронная почта:</label>
+                    <input class="review__input review__input--contacts" type="email" name="email" id="email" placeholder="Введите e-mail" required> </div>
+            </div>
+        </fieldset>
+        <fieldset class="review__item review__item--impression">
+            <legend class="review__title">ваше общее впечатление:</legend>
+            <div class="review__inner review__inner--impression">
+                <input class="review__input-radio review__input-radio--checked" type="radio" name="impression" value="скорее положительное" checked id="radio-1">
+                <label class="review__label-radio" for="radio-1">Скорее положительное</label>
+            </div>
+            <div class="review__inner review__inner--impression">
+                <input class="review__input-radio" type="radio" name="impression" value="скорее отрицательное" id="radio-2">
+                <label class="review__label-radio" for="radio-2">Cкорее отрицательное</label>
+            </div>
+            <div class="review__inner review__inner--impression">
+                <input class="review__input-radio" type="radio" name="impression" value="затрудняюсь ответить" id="radio-3">
+                <label class="review__label-radio" for="radio-3">Затрудняюсь ответить</label>
+            </div>
+        </fieldset>
+        <fieldset class="review__item review__item--places">
+            <legend class="review__title">Посещенные достопримечательности:</legend>
+            <div class="review__places-wrap">
+                <div class="review__inner review__inner--places">
+                    <input class="review__input-checkbox review__input-checkbox--checked" type="checkbox" name="Слайдер" checked id="checkbox-1">
+                    <label class="review__label-checkbox" for="checkbox-1">Мост дьявола</label>
+                </div>
+                <div class="review__inner review__inner--places">
+                    <input class="review__input-checkbox review__input-checkbox--checked" type="checkbox" name="Слайдер" checked id="checkbox-2">
+                    <label class="review__label-checkbox" for="checkbox-2">Слайд парк</label>
+                </div>
+                <div class="review__inner review__inner--places">
+                    <input class="review__input-checkbox" type="checkbox" name="Слайдер" id="checkbox-3">
+                    <label class="review__label-checkbox" for="checkbox-3">Гора-колокол</label>
+                </div>
+                <div class="review__inner review__inner--places">
+                    <input class="review__input-checkbox review__input-checkbox--checked" type="checkbox" name="Слайдер" checked id="checked-4">
+                    <label class="review__label-checkbox" for="checked-4">Красные скалы</label>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="review__item review__comment">
+            <legend class="review__title">опишите свои эмоции</legend>
+            <textarea name="comment" id="comment-field" rows="10">Опишите подробно все свои восторги</textarea>
+        </fieldset>
+        <input class="btn review__btn" type="submit" value="Отправить отзыв"> </form>
+    <footer class="page-footer">
+        <div class="page-footer__hash-tag">#visitsedona</div>
+        <div class="social-btn">
+            <a class="social-btn__link social-btn__link--twitter" href="#">
+                <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
+                    <g id="W6EeEF_1_">
+                        <g>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.484,3.074,0.264,3.685,1.15 c0.694-0.225,1.372-0.47,2.072-0.69c-0.004,0.841-0.538,1.478-0.883,1.728C16.861,2.506,17.5,1.86,17.5,1.86 c-0.175,0.977-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0 c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881 c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.319,1.1,0.523,1.381,0.461 c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.655,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.788,11.283,0.153z" /> </g>
+                    </g>
+                </svg>
+            </a>
+            <a class="social-btn__link social-btn__link--fb" href="#">
+                <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="8.672px" height="18.944px" viewBox="0 0 8.672 18.944" enable-background="new 0 0 8.672 18.944" xml:space="preserve">
+                    <path d="M6.275,3.356c0.799,0,1.599,0,2.398,0c0-1.119,0-2.237,0-3.356c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.114 H0v3.518h1.959c0,3.104,0,6.208,0,9.312c1.279,0,2.559,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.114H5.787 C5.765,5.069,5.75,3.709,6.275,3.356z" /> </svg>
+            </a>
+            <a class="social-btn__link social-btn__link--youtube" href="#">
+                <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19.979px" height="14.015px" viewBox="0 0 19.979 14.015" enable-background="new 0 0 19.979 14.015" xml:space="preserve">
+                    <path d="M17.145,0H2.835C1.275,0,0,1.275,0,2.835v8.345c0,1.56,1.275,2.835,2.835,2.835h14.31c1.56,0,2.835-1.275,2.835-2.835V2.835 C19.979,1.275,18.704,0,17.145,0z M7.036,10.392V3.623l6.769,3.384L7.036,10.392z" /> </svg>
+            </a>
         </div>
-        <div class="review__inner review__inner--places">
-          <label class="review__label-checkbox">
-            <input class="review__input-checkbox review__input-checkbox--checked" type="checkbox" name="Слайдер" checked>Красные скалы</label>
+        <div class="copyright"><span>разработано</span>
+            <a class="copyright__link" href="https://htmlacademy.ru/"><img class="copyright__img" src="img/logo-htmlacademy.svg" width="27" height="34" alt="html-academy"></a>
         </div>
-      </div>
-    </fieldset>
-    <fieldset class="review__item review__comment">
-      <legend class="review__title">опишите свои эмоции</legend>
-      <textarea name="comment" id="comment-field" rows="10">Опишите подробно все свои восторги</textarea>
-    </fieldset>
-    <input class="btn review__btn" type="submit" value="Отправить отзыв"> </form>
-  <footer class="page-footer">
-    <div class="hashtag">#visitsedona</div>
-    <div class="social-btn">
-      <a class="social-btn__link social-btn__link--twitter" href="#"> </a>
-      <a class="social-btn__link social-btn__link--fb" href="#"> </a>
-      <a class="social-btn__link social-btn__link--youtube" href="#"> </a>
-    </div>
-    <div class="copyright"><span>разработано</span>
-      <a class="copyright__link" href="https://htmlacademy.ru/"><img class="copyright__img" src="http://placehold.it/27x34" width="27" height="34" alt="html-academy"></a>
-    </div>
-  </footer>
+    </footer>
+    <script>
+        var navMain = document.querySelector('.main-nav');
+        var navToggle = document.querySelector('.main-nav__toggle');
+        var navButton = document.querySelector('.main-nav__btn');
+        navMain.classList.remove('main-nav--nojs');
+        navToggle.addEventListener('click', function () {
+            if (navMain.classList.contains('main-nav')) {
+                navMain.classList.add('main-nav--closed');
+                navMain.classList.remove('main-nav--opened');
+            }
+        });
+        navButton.addEventListener('click', function () {
+            if (navMain.classList.contains('main-nav--closed')) {
+                navMain.classList.remove('main-nav--closed');
+                navMain.classList.add('main-nav--opened');
+            }
+        });
+    </script>
 </body>
 
 </html>
