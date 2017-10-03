@@ -1,40 +1,33 @@
 .review {
   .container();
-
   &__item {
     border: none;
     .separator();
     padding: 0;
     margin: 0;
   }
-
   &__inner {
     .flex();
     .content-padding();
     flex-basis: 280px;
   }
-
   &__inner--contacts {
     position: relative;
     flex-wrap: wrap;
     margin-bottom: 20px;
   }
-
   &__inner--contacts label {
     margin-bottom: 15px;
   }
-
   &__inner--impression {
     .flex();
     height: 55px;
     align-items: center;
     margin-bottom: 15px;
   }
-
   &__inner--impression:last-child {
     margin-bottom: 25px;
   }
-
   &__inner--places {
     .flex();
     height: 60px;
@@ -42,17 +35,14 @@
     flex-basis: auto;
     margin-bottom: 25px;
   }
-
   &__inner--personality {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 25px;
   }
-
   &__inner--email {
     margin-bottom: 25px;
   }
-
   &__input {
     .font-title();
     font-weight: bold;
@@ -60,20 +50,17 @@
     flex-grow: 1;
     padding-left: 20px;
   }
-
   &__input::-webkit-input-placeholder {
     .font-title();
     font-weight: bold;
     text-transform: none;
   }
-
   &__input--personality {
     width: 192px;
     height: 58px;
     margin-left: 20px;
     box-sizing: border-box;
   }
-
   &__input--contacts {
     width: 280px;
     position: relative;
@@ -83,12 +70,10 @@
     background: #f2f2f2;
     box-sizing: border-box;
   }
-
   &__input-radio {
     position: absolute;
     display: none;
   }
-
   &__input-radio + label::before {
     content: "";
     position: absolute;
@@ -99,15 +84,12 @@
     border-radius: 50%;
     background-color: #f2f2f2;
   }
-
   &__input-radio:hover + label::before {
     background-color: #e5e5e5;
   }
-
   &__input-radio:active + label::before {
     background-color: #d5d5d5;
   }
-
   &__input-radio:checked + label::after {
     content: "";
     position: absolute;
@@ -119,16 +101,13 @@
     background-color: #333333;
     z-index: 1;
   }
-
   &__input-radio:checked:active + label::after {
     background-color: #a4a4a4;
   }
-
   &__input-checkbox {
     position: absolute;
     display: none;
   }
-
   &__input-checkbox + label::before {
     content: "";
     position: absolute;
@@ -139,15 +118,12 @@
     border-radius: 5px;
     background-color: #f2f2f2;
   }
-
   &__input-checkbox:hover + label::before {
     background-color: #e5e5e5;
   }
-
   &__input-checkbox:active + label::before {
     background-color: #d5d5d5;
   }
-
   &__input-checkbox:checked + label::after {
     content: "";
     position: absolute;
@@ -158,11 +134,9 @@
     background: url("../img/icon-tick.svg") no-repeat;
     z-index: 1;
   }
-
   &__input-checkbox:checked:active + label::after {
     background: url("../img/icon-tick--active.svg") no-repeat;
   }
-
   &__label-radio,
   &__label-checkbox {
     .font-title();
@@ -171,11 +145,9 @@
     position: relative;
     padding: 0 0 0 70px;
   }
-
   &__label {
     .font-text();
   }
-
   &__label--tel::before {
     content: "";
     position: absolute;
@@ -187,7 +159,6 @@
     background-position: center;
     z-index: 100;
   }
-
   &__label--email::before {
     content: "";
     position: absolute;
@@ -199,17 +170,14 @@
     background-position: center;
     z-index: 100;
   }
-
   &__btn {
     .button ();
     margin-bottom: 40px;
   }
-
   &__comment {
     margin-bottom: 50px;
     border: none;
   }
-
   &__comment textarea {
     width: 100%;
     .font-title();
@@ -218,7 +186,6 @@
     .content-padding();
     box-sizing: border-box;
   }
-
   &__title {
     width: 100%;
     .font-title();
@@ -227,5 +194,72 @@
     padding-bottom: 25px;
     padding-top: 25px;
     margin-bottom: 25px;
+  }
+  @media @tablet-widths {
+    .flex();
+    flex-wrap: wrap;
+    padding: 0 60px;
+    &__item--personality {
+      flex-basis: 324px;
+    }
+    &__item--impression {
+      flex-basis: 324px;
+      order: -1;
+    }
+    &__item--places &__title {
+      width: 280px;
+      margin: 0;
+    }
+    &__contacts-wrap,
+    &__places-wrap {
+      .flex();
+      flex-wrap: wrap;
+      width: 648px;
+      justify-content: center;
+    }
+    &__inner--places:nth-child(2) {
+      order: 1;
+    }
+    &__inner--places:nth-child(4) {
+      order: 2;
+      padding-left: 30px;
+      box-sizing: border-box;
+    }
+    &__inner--places:nth-child(3) {
+      padding-left: 30px;
+      box-sizing: border-box;
+    }
+    &__inner--tel {
+      width: 648px;
+    }
+    &__inner--email {
+      width: 648px;
+    }
+    &__inner--places {
+      flex-basis: 226px;
+    }
+    &__input--contacts {
+      width: 648px;
+    }
+    &__comment {
+      width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  &__label--tel:before {
+    top: 41px;
+    left: 609px;
+    width: 57px;
+    height: 57px;
+  }
+  &__label--email:before {
+    top: 41px;
+    left: 609px;
+    width: 57px;
+    height: 57px;
+  }
+  &__btn {
+    width: 324px;
   }
 }

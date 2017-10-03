@@ -3,7 +3,6 @@
   .flex();
   justify-content: center;
   margin-bottom: 40px;
-
   &__link {
     .flex();
     width: 50px;
@@ -13,8 +12,16 @@
     justify-content: center;
     align-items: center;
   }
-
   &__link svg {
     fill: @white-color;
+  }
+  @media @tablet-widths {
+    min-width: 256px;
+    margin-bottom: 0;
+  }
+  &__link:last-child {
+    @media @tablet-widths {
+      margin-right: 0;
+    }
   }
 }

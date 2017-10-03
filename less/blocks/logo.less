@@ -1,5 +1,13 @@
 .logo {
   .container();
+  display: flex;
+  justify-content: center;
   position: absolute;
-  left: 110px;
+
+  @media @tablet-widths {
+    display: flex;
+    width: auto;
+    top: 0;
+        margin-left: 330px;
+  }
 }

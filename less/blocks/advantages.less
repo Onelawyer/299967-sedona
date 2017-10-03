@@ -3,23 +3,36 @@
   background-color: @additional-bg;
   padding-top: 35px;
   padding-bottom: 35px;
-
   &__title {
     .font-title();
     margin-top: 0;
   }
-
   &__description:last-child {
     margin-bottom: 0;
   }
-
   &__description,
   &__item span {
     .font-text();
   }
-
   &__item {
     .content-padding();
     text-align: center;
   }
+  @media @tablet-widths {
+    .flex();
+    justify-content: space-between;
+    .content-padding--desktop();
+  }
+  &__title {
+    @media @tablet-widths {
+      .font-title--desktop();
+    }
+  }
+  &__item {
+    @media @tablet-widths {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  }
 }
+
