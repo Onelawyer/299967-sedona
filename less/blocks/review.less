@@ -362,6 +362,7 @@
 
     &__inner--personality {
       width: 400px;
+      flex-basis: 480px;
     }
 
     &__inner--places {
@@ -369,13 +370,23 @@
     }
 
     &__inner--email {
-      flex-basis: 480px;
       width: 480px;
+      flex-basis: 480px;
     }
 
     &__inner--tel {
       flex-basis: 400px;
       width: 400px;
+    }
+
+    &__input--contacts[name="email"] {
+      width: 480px;
+      flex-basis: 480px;
+    }
+
+    &__input--contacts[name="tel"] {
+      width: 400px;
+      flex-basis: 400px;
     }
 
     &__contacts-wrap,
