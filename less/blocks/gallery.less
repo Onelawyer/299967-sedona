@@ -1,37 +1,45 @@
 .gallery {
   .container();
   text-align: center;
+
   &__item {
     margin: 0;
     padding-bottom: 25px;
     padding-top: 22px;
     border-bottom: 1px solid #e5e5e5;
   }
+
   &__item:nth-child(1) {
     height: 400px;
   }
+
   &__like-block {
     .flex();
     align-items: flex-end;
   }
+
   &__like {
     .font-text;
     font-weight: bold;
     margin: 0;
   }
+
   &__description {
     .content-padding();
   }
+
   &__title {
     .font-text;
     font-weight: bold;
     text-align: left;
   }
+
   &__autor {
     .font-text;
     text-transform: none;
     text-align: left;
   }
+
   &__btn {
     width: 40px;
     border: none;
@@ -39,42 +47,113 @@
     padding: 0;
     text-align: left;
   }
+
   @media @tablet-widths {
     .flex();
     flex-wrap: wrap;
     padding: 0 60px 0 60px;
     box-sizing: border-box;
+
     &__description {
       .flex();
       justify-content: space-between;
       align-items: center;
       background-color: @light-bg-color;
     }
+
     &__item {
       width: 324px;
       height: auto;
       position: relative;
       padding: 0;
+
+      & picture>img {
+        width: 324px;
+        height: 267px;
+      }
     }
+
     &__item:nth-child(1) {
       width: 768px;
       height: auto;
     }
+
     &__item:nth-child(1) picture>img {
       width: 648px;
       height: 400px;
     }
+
     &__like {
       color: @black-color;
     }
+
     &__title {
       .font-text();
       color: @black-color;
       font-weight: bold;
       line-height: 24px;
     }
+
     &__autor {
       color: @grey-color;
+      line-height: 24px;
+    }
+  }
+  @media @desktop-widths {
+    .flex();
+    flex-wrap: wrap;
+    .content-padding--desktop();
+
+    &__item:nth-child(1) {
+      width: 1200px;
+    }
+
+    &__item:nth-child(1) &__description {
+      justify-content: space-between;
+      box-sizing: border-box;
+    }
+
+    &__description {
+      .flex();
+      justify-content: space-between;
+      align-items: center;
+      position: absolute;
+      bottom: 3px;
+      left: 0px;
+      width: 100%;
+      background-color: @black-color-opacity;
+      box-sizing: border-box;
+    }
+
+    &__item {
+      position: relative;
+      padding-bottom: 0px;
+      width: 400px;
+
+      &:nth-child(1) picture>img {
+        width: 1200px;
+        height: 400px;
+      }
+
+      & picture>img {
+        width: 400px;
+        height: 267px;
+      }
+    }
+
+    &__like {
+      color: @white-color;
+    }
+
+    &__title {
+      .font-text();
+      color: @white-color;
+      font-weight: bold;
+      line-height: 24px;
+    }
+
+    &__autor {
+      color: @white-color;
       line-height: 24px;
     }
   }

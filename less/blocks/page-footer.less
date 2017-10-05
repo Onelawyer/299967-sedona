@@ -3,18 +3,21 @@
   .content-padding();
   text-align: center;
   padding-bottom: 20px;
+
   &__hash-tag {
     .font-btn();
     font-weight: bold;
     color: black;
     margin-bottom: 40px;
   }
+
   @media @tablet-widths {
     .flex();
     justify-content: space-between;
     align-items: center;
     .content-padding--desktop();
   }
+
   &__hash-tag {
     @media @tablet-widths {
       display: flex;

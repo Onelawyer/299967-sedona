@@ -1,19 +1,21 @@
 .main-nav {
   .container();
   position: relative;
+
   &__link {
     .font-title();
     color: @white-color;
     text-align: center;
     text-decoration: none;
-    margin: auto;
   }
+
   &__list {
     .content-padding();
     margin: 0;
     padding: 0;
     list-style-type: none;
     background-color: @main-bg;
+
     & li {
       display: flex;
       @media @mobile-widths-only {
@@ -22,12 +24,21 @@
       }
     }
   }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   &--closed {
     display: none;
   }
+
   &--opened {
     display: block;
   }
+
   &__toggle {
     position: absolute;
     top: 0;
@@ -40,6 +51,7 @@
     cursor: pointer;
     border: none;
     background: none;
+
     &::before {
       content: "";
       position: absolute;
@@ -50,6 +62,7 @@
       background-color: #ffffff;
       transform: rotate(45deg);
     }
+
     &::after {
       content: "";
       position: absolute;
@@ -61,11 +74,13 @@
       transform: rotate(135deg);
     }
   }
+
   &__wrap {
     display: flex;
     position: relative;
     height: 55px;
   }
+
   &__btn {
     margin-left: auto;
     background: none;
@@ -73,48 +88,65 @@
     margin-top: 12px;
     margin-bottom: 15px;
   }
+
   &__btn svg {
     fill: #81b3d2;
   }
+
   @media @tablet-widths {
-    position: relative;
+    position:relative;
+
     &__link {
       .font-title--desktop();
       font-size: 14px;
       line-height: 26px;
     }
+
     &__toggle {
       .visually-hidden();
     }
+
     &__btn {
       .visually-hidden();
     }
+
     &__block {
       height: 0;
     }
+
     &__block svg {
       .visually-hidden();
     }
+
     &__list {
       .flex();
       position: relative;
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content: flex-start;
       .content-padding--desktop();
       background-color: @white-color;
     }
+
     &__list li {
       flex-basis: 154px;
     }
+
     & li:nth-child(2),
     & li:nth-child(6) {
       margin-right: auto;
     }
   }
+
     &__wrap {
       @media @tablet-widths {
-    position:static;
     height: 0;
   }
 }
+
+  @media @desktop-widths {
+        &__list li {
+      flex-basis: 250px;
+    }
+  }
 }
+

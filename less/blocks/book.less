@@ -2,19 +2,23 @@
   .container();
   .content-padding();
   text-align: center;
+
   &__title {
     .font-title();
     font-size: 21px;
     margin-bottom: 30px;
   }
+
   &__description {
     .font-text();
     margin-bottom: 40px;
   }
+
   &__btn {
     .button ();
     margin-bottom: 50px;
   }
+
   @media @tablet-widths {
     .flex();
     flex-wrap: wrap;
@@ -23,16 +27,18 @@
     .content-padding--desktop();
     margin-left: auto;
     margin-right: auto;
-  }
-  &__title {
-    @media @tablet-widths {
+
+    &__title {
       .font-title--desktop();
       font-size: 30px;
     }
-  }
-  &__description {
-    @media @tablet-widths {
+
+    &__description {
       line-height: 24px;
     }
+
+      &__description span {
+        display: block;
+      }
+    }
   }
-}
