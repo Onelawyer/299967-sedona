@@ -3,6 +3,7 @@
 
   &__item {
     border: none;
+
     @media @mobile-widths-only {
       .separator();
     }
@@ -272,6 +273,7 @@
     }
 
     &__inner--places {
+      flex-basis: 260px;
       padding: 0;
     }
 
@@ -293,10 +295,6 @@
 
     &__inner--email {
       flex-basis: 648px;
-    }
-
-    &__inner--places {
-      flex-basis: 260px;
     }
 
     &__inner--impression {
@@ -325,14 +323,14 @@
       margin-right: auto;
     }
 
-    &__label--tel:before {
+    &__label--tel::before {
       top: 41px;
       left: 590px;
       width: 57px;
       height: 57px;
     }
 
-    &__label--email:before {
+    &__label--email::before {
       top: 41px;
       left: 590px;
       width: 57px;
@@ -386,12 +384,12 @@
       justify-content: space-between;
     }
 
-    &__label--email:before {
+    &__label--email::before {
       top: 41px;
       left: 423px;
     }
 
-    &__label--tel:before {
+    &__label--tel::before {
       top: 44px;
       left: 343px;
     }
