@@ -84,4 +84,74 @@
   &__img {
     display: block;
   }
+
+  @media @tablet-widths {
+    padding: 0 60px;
+    .content-padding--desktop;
+
+    &__title {
+      .font-title--desktop();
+      font-size: 30px;
+    }
+
+    &__inner-wrap {
+      width: 432px;
+      .content-padding--desktop();
+      margin: 0 auto;
+    }
+
+    &__player {
+      display: flex;
+      width: auto;
+      justify-content: center;
+      margin-bottom: 78px;
+    }
+
+    &__toolbar {
+      width: 648px;
+      left: 60px;
+      bottom: 0;
+    }
+
+    &__tools {
+      position: relative;
+      background-color: @black-color-opacity;
+    }
+
+    &__tools::before {
+      content: "";
+      position: absolute;
+      top: 30px;
+      left: 96px;
+      width: 396px;
+      height: 3px;
+      background-color: @white-color;
+    }
+
+    &__tools::after {
+      content: "";
+      position: absolute;
+      top: 26px;
+      left: 200px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: @white-color;
+    }
+
+    &__scale {
+      .visually-hidden()
+    }
+
+    &__img {
+      width: 648px;
+      height: 500px;
+    }
+  }
+
+  @media @desktop-widths {
+    &__toolbar {
+      left: 276px;
+    }
+  }
 }

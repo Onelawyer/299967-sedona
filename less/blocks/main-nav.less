@@ -7,7 +7,6 @@
     color: @white-color;
     text-align: center;
     text-decoration: none;
-    margin: auto;
   }
 
   &__list {
@@ -19,9 +18,18 @@
 
     & li {
       display: flex;
-      height: 55px;
-      box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.35), 0 1px 0 rgba(255, 255, 255, 0.5);
+
+      @media @mobile-widths-only {
+        height: 55px;
+        box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.35), 0 1px 0 rgba(255, 255, 255, 0.5);
+      }
     }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &--closed {
@@ -84,5 +92,59 @@
 
   &__btn svg {
     fill: #81b3d2;
+  }
+
+  @media @tablet-widths {
+    position: relative;
+
+    &__link {
+      .font-title--desktop();
+      font-size: 14px;
+      line-height: 26px;
+    }
+
+    &__toggle {
+      .visually-hidden();
+    }
+
+    &__btn {
+      .visually-hidden();
+    }
+
+    &__block {
+      height: 0;
+    }
+
+    &__block svg {
+      .visually-hidden();
+    }
+
+    &__list {
+      .flex();
+      position: relative;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      .content-padding--desktop();
+      background-color: @white-color;
+    }
+
+    &__list li {
+      flex-basis: 154px;
+    }
+
+    & li:nth-child(2),
+    & li:nth-child(6) {
+      margin-right: auto;
+    }
+
+    &__wrap {
+      height: 0;
+    }
+  }
+
+  @media @desktop-widths {
+    &__list li {
+      flex-basis: 250px;
+    }
   }
 }

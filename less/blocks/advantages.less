@@ -22,4 +22,29 @@
     .content-padding();
     text-align: center;
   }
+
+  @media @tablet-widths {
+    .flex();
+    justify-content: space-between;
+    .content-padding--desktop();
+    padding: 0;
+
+    &__title {
+      .font-title--desktop();
+    }
+
+    &__item {
+      width: 256px;
+      padding: 50px;
+      box-sizing: border-box;
+    }
+  }
+
+  @media @desktop-widths {
+    &__item {
+      width: 400px;
+      padding: 50px;
+      box-sizing: border-box;
+    }
+  }
 }

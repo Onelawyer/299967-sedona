@@ -10,4 +10,21 @@
     color: black;
     margin-bottom: 40px;
   }
+
+  @media @tablet-widths {
+    .flex();
+    justify-content: space-between;
+    align-items: center;
+    .content-padding--desktop();
+
+    &__hash-tag {
+      display: flex;
+      justify-content: flex-start;
+      .font-title--desktop();
+      min-width: 256px;
+      padding-left: 60px;
+      margin-bottom: 0;
+      box-sizing: border-box;
+    }
+  }
 }
