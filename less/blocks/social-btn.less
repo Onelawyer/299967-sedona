@@ -2,16 +2,32 @@
   .container();
   .flex();
   justify-content: center;
-  margin-bottom: 40px;
+  margin-bottom: 38px;
 
   &__link {
     .flex();
-    width: 50px;
-    height: 50px;
+    width: 46px;
+    height: 48px;
     background-color: @main-bg;
-    margin-right: 10px;
+    margin-right: 7px;
     justify-content: center;
     align-items: center;
+  }
+
+  &__link:hover {
+    background: #669ec0;
+  }
+
+  &__link:active {
+    background: #5496bd;
+  }
+
+  &__link:active path {
+    fill: #88b6d1;
+  }
+
+  &__link:last-child {
+    margin-right: 0;
   }
 
   &__link svg {
@@ -21,11 +37,13 @@
   @media @tablet-widths {
     min-width: 256px;
     margin-bottom: 0;
-  }
 
-  &__link:last-child {
-    @media @tablet-widths {
+    &__link:last-child {
       margin-right: 0;
     }
+  }
+
+  @media @desktop-widths {
+    margin-left: 156px;
   }
 }

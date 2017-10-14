@@ -3,12 +3,15 @@
 
   &__item {
     border: none;
-
     @media @mobile-widths-only {
       .separator();
     }
     padding: 0;
     margin: 0;
+  }
+
+  &__item--places &__title {
+    padding-bottom: 16px;
   }
 
   &__inner {
@@ -20,11 +23,10 @@
   &__inner--contacts {
     position: relative;
     flex-wrap: wrap;
-    margin-bottom: 20px;
   }
 
   &__inner--contacts label {
-    margin-bottom: 15px;
+    padding: 0 0 7px 22px;
   }
 
   &__inner--impression {
@@ -35,7 +37,7 @@
   }
 
   &__inner--impression:last-child {
-    margin-bottom: 25px;
+    margin-bottom: 28px;
   }
 
   &__inner--places {
@@ -43,17 +45,29 @@
     height: 60px;
     align-items: center;
     flex-basis: auto;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+  }
+
+  &__inner--places:last-child {
+    margin-bottom: 24px;
   }
 
   &__inner--personality {
     align-items: center;
-    justify-content: flex-end;
-    margin-bottom: 25px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__inner--personality:last-child {
+    margin-bottom: 24px;
   }
 
   &__inner--email {
-    margin-bottom: 25px;
+    margin-bottom: 29px;
+  }
+
+  &__inner--tel {
+    margin-bottom: 12px;
   }
 
   &__input {
@@ -72,14 +86,27 @@
   &__input--personality {
     width: 192px;
     height: 58px;
-    margin-left: 20px;
+    padding: 0 0 2px 20px;
+    border: none;
+    background: #f2f2f2;
     box-sizing: border-box;
+  }
+
+  &__input--personality:focus {
+    background: none;
+    border: 4px solid #f2f2f2;
+    box-sizing: border-box;
+    padding-left: 16px;
+  }
+
+  &__input--personality[name="name"] {
+    width: 230px;
   }
 
   &__input--contacts {
     width: 280px;
     position: relative;
-    padding-right: 70px;
+    padding: 0 70px 0 22px;
     height: 58px;
     border: none;
     background: #f2f2f2;
@@ -94,10 +121,10 @@
   &__input-radio + label::before {
     content: "";
     position: absolute;
-    top: -20px;
-    left: 0;
-    width: 55px;
-    height: 55px;
+    top: -13px;
+    left: 0px;
+    width: 56px;
+    height: 56px;
     border-radius: 50%;
     background-color: #f2f2f2;
   }
@@ -113,10 +140,10 @@
   &__input-radio:checked + label::after {
     content: "";
     position: absolute;
-    top: -5px;
-    left: 15px;
-    width: 26px;
-    height: 26px;
+    top: 5px;
+    left: 18px;
+    width: 22px;
+    height: 22px;
     border-radius: 50%;
     background-color: #333333;
     z-index: 1;
@@ -134,7 +161,7 @@
   &__input-checkbox + label::before {
     content: "";
     position: absolute;
-    top: -18px;
+    top: -14px;
     left: 0;
     width: 55px;
     height: 55px;
@@ -155,8 +182,8 @@
     position: absolute;
     width: 25px;
     height: 19px;
-    top: 0;
-    left: 20px;
+    top: 6px;
+    left: 18px;
     background: url("../img/icon-tick.svg") no-repeat;
     z-index: 1;
   }
@@ -171,17 +198,18 @@
     font-weight: bold;
     text-transform: none;
     position: relative;
-    padding: 0 0 0 70px;
+    padding: 0 0 0 80px;
   }
 
   &__label {
     .font-text();
+    padding-top: 2px;
   }
 
   &__label--tel::before {
     content: "";
     position: absolute;
-    top: 41px;
+    top: 33px;
     left: 242px;
     width: 58px;
     height: 58px;
@@ -193,7 +221,7 @@
   &__label--email::before {
     content: "";
     position: absolute;
-    top: 40px;
+    top: 33px;
     left: 242px;
     width: 58px;
     height: 58px;
@@ -204,20 +232,35 @@
 
   &__btn {
     .button ();
-    margin-bottom: 42px;
+    margin-bottom: 70px;
+  }
+
+  &__btn:hover {
+    background: #669ec0;
+  }
+
+  &__btn:active {
+    background: #5496bd;
+  }
+
+  &__btn-wrap {
+    text-align: center;
   }
 
   &__comment {
+    text-align: center;
     margin-bottom: 50px;
     border: none;
   }
 
   &__comment textarea {
-    width: 100%;
+    width: 280px;
     .font-title();
     font-weight: bold;
     text-transform: none;
-    .content-padding();
+    padding: 12px 0px 14px 20px;
+    border: none;
+    background: #f2f2f2;
     box-sizing: border-box;
   }
 
@@ -226,9 +269,8 @@
     .font-title();
     font-weight: bold;
     text-align: center;
-    padding-bottom: 25px;
-    padding-top: 25px;
-    margin-bottom: 25px;
+    padding-bottom: 22px;
+    padding-top: 17px;
   }
 
   &__footnote {
@@ -249,8 +291,55 @@
       box-sizing: border-box;
     }
 
+    &__item--contacts {
+      margin-bottom: 19px;
+    }
+
+    &__item--contacts &__title {
+      position: relative;
+      text-align: center;
+      padding-bottom: 26px;
+    }
+
+    &__item--contacts &__title::before {
+      content: "";
+      position: absolute;
+      width: 126px;
+      height: 1px;
+      left: 81%;
+      top: 30px;
+      background: #e5e5e5;
+    }
+
+    &__item--contacts &__title::after {
+      content: "";
+      position: absolute;
+      width: 126px;
+      height: 1px;
+      left: 0;
+      top: 30px;
+      background: #e5e5e5;
+    }
+
+    &__item--personality {
+      position: relative;
+      margin-bottom: 26px;
+    }
+
+    &__item--personality::before {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 1px;
+      left: -149px;
+      top: 175px;
+      background: #e5e5e5;
+      transform: rotate(90deg);
+    }
+
     &__item--personality &__title {
-      text-align: left;
+      padding-left: 60px;
+      margin-bottom: 38px;
     }
 
     &__item--impression {
@@ -258,8 +347,17 @@
       order: -1;
     }
 
+    &__item--impression &__title {
+      margin-bottom: 38px;
+    }
+
+    &__item--places {
+      padding: 32px 0 18px 62px;
+    }
+
     &__item--places &__title {
       width: 648px;
+      text-align: center;
       box-sizing: border-box;
       padding: 10px 180px;
     }
@@ -275,6 +373,7 @@
     &__inner--places {
       flex-basis: 260px;
       padding: 0;
+      margin-bottom: 28px;
     }
 
     &__inner--places:nth-child(2) {
@@ -287,6 +386,7 @@
 
     &__inner--personality {
       padding: 0;
+      justify-content: flex-end;
     }
 
     &__inner--tel {
@@ -299,10 +399,12 @@
 
     &__inner--impression {
       padding: 0;
+      margin-bottom: 24px;
     }
 
     &__inner--contacts {
       padding: 0;
+      margin-bottom: 23px;
     }
 
     &__input--contacts {
@@ -311,34 +413,39 @@
 
     &__input--personality {
       width: 177px;
+      margin-left: 14px;
     }
 
     &__input--personality[name="name"] {
       width: 216px;
     }
 
-    &__comment {
-      width: 960px;
-      margin-left: auto;
-      margin-right: auto;
+    &__input--personality[name="patronymic"] {
+      margin-left: 20px;
     }
 
     &__label--tel::before {
-      top: 41px;
-      left: 590px;
+      top: 34px;
+      left: 591px;
       width: 57px;
       height: 57px;
     }
 
     &__label--email::before {
-      top: 41px;
-      left: 590px;
+      top: 34px;
+      left: 591px;
       width: 57px;
       height: 57px;
     }
 
+    &__label-radio {
+      padding: 0 0 0 76px;
+    }
+
     &__btn {
       width: 324px;
+      padding: 0 12px 4px 0;
+      margin-bottom: 96px;
     }
 
     &__btn-wrap {
@@ -346,6 +453,34 @@
       .font-text();
       flex-basis: 648px;
       justify-content: space-between;
+    }
+
+    &__title {
+      text-align: left;
+      font-size: 21px;
+      padding-top: 18px;
+    }
+
+    &__comment {
+      width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 54px;
+    }
+    textarea {
+      width: 100%;
+      height: 160px;
+      padding: 15px 0px 0 22px;
+    }
+
+    &__comment &__title {
+      text-align: center;
+      padding-right: 8px;
+      margin-bottom: 38px;
+    }
+
+    &__footnote {
+      margin-top: 18px;
     }
   }
 
@@ -356,17 +491,37 @@
       flex-basis: 480px;
     }
 
+    &__item--impression &__title {
+      padding-left: 80px;
+    }
+
     &__item--personality {
       padding-left: 80px;
+      margin-bottom: 24px;
+    }
+
+    &__item--personality &__title {
+      padding-left: 0;
+    }
+
+    &__item--places {
+      padding: 30px 0 18px 0;
+    }
+
+    &__inner--contacts {
+      display: flex;
+      align-items: center;
+      margin-top: 51px;
     }
 
     &__inner--personality {
       width: 400px;
       flex-basis: 480px;
+      justify-content: flex-start;
     }
 
     &__inner--places {
-      flex-basis: 240px;
+      flex-basis: 205px;
     }
 
     &__inner--email {
@@ -379,14 +534,22 @@
       width: 400px;
     }
 
+    &__input--personality {
+      flex-basis: 320px;
+    }
+
+    &__input--personality[name="name"] {
+      flex-basis: 420px;
+    }
+
     &__input--contacts[name="email"] {
-      width: 480px;
-      flex-basis: 480px;
+      width: 315px;
+      flex-basis: 315px;
     }
 
     &__input--contacts[name="tel"] {
-      width: 400px;
-      flex-basis: 400px;
+      width: 315px;
+      flex-basis: 315px;
     }
 
     &__contacts-wrap,
@@ -396,13 +559,49 @@
     }
 
     &__label--email::before {
-      top: 41px;
+      top: 0;
       left: 423px;
     }
 
+    &__inner--contacts label {
+      padding: 0 15px 0 0;
+    }
+
+    &__inner--places:nth-child(2),
+    &__inner--places:nth-child(3) {
+      padding-left: 22px;
+    }
+
+    &__label--email {
+      padding: 0 15px 0 0;
+    }
+
     &__label--tel::before {
-      top: 44px;
+      top: 0;
       left: 343px;
+    }
+
+    &__label--tel span {
+      display: none;
+    }
+
+    &__label-radio {
+      padding: 0 0 0 80px;
+    }
+
+    &__btn {
+      width: 480px;
+      padding: 0;
+      margin-bottom: 102px;
+    }
+
+    &__btn-wrap {
+      flex-basis: 960px;
+      justify-content: space-between;
+    }
+
+    &__comment {
+      margin-bottom: 52px;
     }
   }
 }

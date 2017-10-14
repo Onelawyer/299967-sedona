@@ -5,15 +5,23 @@
     background-color: @main-bg;
     .content-padding();
     text-align: center;
-    padding-bottom: 45px;
-    padding-top: 45px;
+    padding: 52px 20px 40px 20px;
+  }
+
+  &__wrap--reverse {
+    padding: 22px 20px 40px 20px;
   }
 
   &__title {
     .font-title();
     color: @white-color;
-    margin-top: 22px;
-    margin-bottom: 7px;
+    margin-top: 16px;
+    margin-bottom: 8px;
+  }
+
+  &__title br,
+  &__description br {
+    display: none;
   }
 
   &__description,
@@ -37,6 +45,7 @@
   }
 
   &__img {
+    display: block;
     max-width: 100%;
     height: auto;
   }
@@ -46,7 +55,7 @@
 
     &__wrap {
       width: 256px;
-      padding: 45px 45px 45px 45px;
+      padding: 44px 45px 45px 45px;
       box-sizing: border-box;
     }
 
@@ -57,12 +66,12 @@
     &__title {
       .font-title--desktop();
       color: @white-color;
-      margin-bottom: 15px;
+      margin-bottom: 9px;
       margin-top: 0;
     }
 
     &__description {
-      margin-top: 30px;
+      margin-top: 20px;
     }
 
     &__img {
@@ -72,6 +81,9 @@
   }
 
   @media @desktop-widths {
+    max-height: 256px;
+    overflow: hidden;
+
     &__wrap {
       width: 400px;
       padding: 50px 64px;
@@ -79,8 +91,19 @@
     }
 
     &__img {
+      position: relative;
+      top: -69px;
       width: 800px;
-      height: 256px;
+      height: 400px;
+    }
+
+    &__img--reverse {
+      top: -75px;
+    }
+
+    &__title {
+      margin: 0;
+      padding: 2px 60px 10px 60px;
     }
   }
 }

@@ -1,18 +1,20 @@
 .presentation {
   .container();
-  margin-bottom: 100px;
+  margin-bottom: 140px;
 
   &__title {
     .font-title();
+    margin-bottom: 25px;
   }
 
   &__description {
     .font-text();
+    padding: 0 30px;
   }
 
   &__inner-wrap {
-    .content-padding();
     text-align: center;
+    padding-bottom: 18px;
   }
 
   &__player {
@@ -38,19 +40,56 @@
   &__btn {
     border: none;
     background: none;
+    padding-top: 5px;
   }
 
   &__btn--subtitles {
     margin-left: auto;
   }
 
+  &__btn--subtitles path {
+    fill: #5c6870;
+  }
+
+  &__btn--subtitles:hover path {
+    fill: #333333;
+  }
+
+  &__btn--subtitles:active path {
+    fill: #c1c1c1;
+  }
+
   &__btn--replay {
-    margin-left: 25px;
+    margin-left: 20px;
+  }
+
+  &__btn--replay path {
+    fill: #5c6870;
+  }
+
+  &__btn--replay:hover path {
+    fill: #333333;
+  }
+
+  &__btn--replay:active path {
+    fill: #c1c1c1;
   }
 
   &__btn--fullscreen {
-    margin-right: 25px;
-    margin-left: 25px;
+    margin-right: 18px;
+    margin-left: 18px;
+  }
+
+  &__btn--fullscreen polygon {
+    fill: #5c6870;
+  }
+
+  &__btn--fullscreen:hover polygon {
+    fill: #333333;
+  }
+
+  &__btn--fullscreen:active polygon {
+    fill: #c1c1c1;
   }
 
   &__scale {
@@ -92,19 +131,21 @@
     &__title {
       .font-title--desktop();
       font-size: 30px;
+      margin-bottom: 30px;
     }
 
     &__inner-wrap {
-      width: 432px;
+      width: 480px;
       .content-padding--desktop();
       margin: 0 auto;
+      margin-bottom: 38px;
     }
 
     &__player {
       display: flex;
       width: auto;
       justify-content: center;
-      margin-bottom: 78px;
+      margin-bottom: 75px;
     }
 
     &__toolbar {
@@ -116,27 +157,28 @@
     &__tools {
       position: relative;
       background-color: @black-color-opacity;
+      height: 94px;
     }
 
     &__tools::before {
       content: "";
       position: absolute;
-      top: 30px;
-      left: 96px;
-      width: 396px;
+      top: 45px;
+      left: 94px;
+      width: 390px;
       height: 3px;
-      background-color: @white-color;
+      background-color: white;
     }
 
     &__tools::after {
       content: "";
       position: absolute;
-      top: 26px;
-      left: 200px;
-      width: 10px;
-      height: 10px;
+      top: 42px;
+      left: 208px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
-      background-color: @white-color;
+      background-color: white;
     }
 
     &__scale {
@@ -147,11 +189,36 @@
       width: 648px;
       height: 500px;
     }
+
+    &__btn--replay {
+      margin-left: 30px;
+    }
   }
 
   @media @desktop-widths {
+
     &__toolbar {
       left: 276px;
+    }
+
+    &__img {
+      width: 800px;
+      height: 500px;
+    }
+
+    &__toolbar {
+      width: 800px;
+      left: 200px;
+      bottom: 0;
+    }
+
+    &__btn--fullscreen {
+      margin-right: 38px;
+      margin-left: 18px;
+    }
+
+    &__player {
+      margin-bottom: 120px;
     }
   }
 }
