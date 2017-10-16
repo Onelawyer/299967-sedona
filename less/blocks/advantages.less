@@ -5,7 +5,7 @@
   &__title {
     .font-title();
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 9px;
   }
 
   &__title br {
@@ -19,12 +19,14 @@
   &__description,
   &__item span {
     .font-text();
-    line-height: 22px;
+    color: @black-color;
+    line-height: 21px;
+    margin-top: 16px;
   }
 
   &__item {
     text-align: center;
-    padding: 25px 35px 29px 35px;
+    padding: 25px 35px 30px 35px;
   }
 
   @media @tablet-widths {
@@ -69,5 +71,8 @@
     &__title {
       padding: 0 60px;
     }
+      &__title br {
+    display: block;
+  }
   }
 }
