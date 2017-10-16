@@ -2,14 +2,22 @@
   .container();
 
   &__wrap {
-    background-color: @main-bg;
     .content-padding();
     text-align: center;
     padding: 52px 20px 40px 20px;
+    background-color: @main-bg;
+    @media @mobile-widths-only {
+      background: url("../img/bg-triangle.svg") no-repeat;
+      background-color: @main-bg;
+      background-size: 320px auto;
+      background-position: top;
+    }
   }
 
   &__wrap--reverse {
     padding: 22px 20px 40px 20px;
+    background: none;
+    background-color: @main-bg;
   }
 
   &__title {
@@ -63,12 +71,24 @@
       order: 1;
     }
 
+    &__wrap span {
+      line-height: 21px;
+    }
+
+    &__wrap p {
+      margin-top: 22px;
+    }
+
     &__title {
       .font-title--desktop();
       color: @white-color;
-      margin-bottom: 9px;
+      margin-bottom: 11px;
       margin-top: 0;
     }
+
+    &__title br {
+      display: block;
+  }
 
     &__description {
       margin-top: 20px;

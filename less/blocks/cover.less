@@ -11,7 +11,6 @@
 
   &__title {
     .font-title();
-    font-weight: normal;
     margin: 14px 0 28px 0;
   }
 
@@ -55,8 +54,6 @@
     background-position: bottom;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      width: 320px;
-      height: 389px;
       background: url("../img/bg-intro-triangle-mobile.svg") no-repeat, url("../img/bg-back-mobile@2x.jpg");
       background-size: auto 389px;
       background-position: bottom;
@@ -126,8 +123,13 @@
       line-height: 24px;
     }
 
+    &__description--photo br {
+      display: block;
+  }
+
     &__description--form {
       .font-text();
+      width: 440px;
       line-height: 24px;
     }
 
@@ -140,7 +142,9 @@
       background-position: bottom;
 
       @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-        background: url("../img/bg-back-tablet@2x.jpg");
+        background: url("../img/bg-intro-triangle-tablet.svg") no-repeat, url("../img/bg-back-tablet@2x.jpg");
+        background-size: 768px auto;
+        background-position: bottom;
       }
     }
 
@@ -202,11 +206,13 @@
       width: 1200px;
       height: 518px;
       background: url("../img/bg-intro-triangle-desktop.svg") no-repeat, url("../img/bg-back-desktop@1x.jpg");
-      background-size: 1200px auto;
+      background-size: 1200 auto;
       background-position: bottom;
 
       @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-        background: url("../img/bg-back-desktop@2x.jpg");
+        background: url("../img/bg-intro-triangle-desktop.svg") no-repeat, url("../img/bg-back-desktop@2x.jpg");
+        background-size: 1200 auto;
+        background-position: bottom;
       }
     }
 

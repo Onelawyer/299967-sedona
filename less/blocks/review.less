@@ -78,6 +78,19 @@
     padding-left: 20px;
   }
 
+  &__input:focus,
+  textarea:focus {
+    background: none;
+    border: 4px solid #f2f2f2;
+    outline: none;
+    box-sizing: border-box;
+  }
+
+  &__input:hover,
+  textarea:hover {
+    background: #e5e5e5;
+  }
+
   &__input::-webkit-input-placeholder {
     .font-title();
     font-weight: bold;
@@ -94,9 +107,6 @@
   }
 
   &__input--personality:focus {
-    background: none;
-    border: 4px solid #f2f2f2;
-    box-sizing: border-box;
     padding-left: 16px;
   }
 
@@ -112,6 +122,10 @@
     border: none;
     background: #f2f2f2;
     box-sizing: border-box;
+  }
+
+  &__input--contacts:focus {
+    padding: 0 70px 0 18px;
   }
 
   &__input-radio {
@@ -233,7 +247,7 @@
   }
 
   &__btn {
-    .button ();
+    width: 280px;
     margin-bottom: 70px;
   }
 
@@ -255,7 +269,7 @@
     border: none;
   }
 
-  &__comment textarea {
+  textarea {
     width: 280px;
     .font-title();
     font-weight: bold;
@@ -264,6 +278,10 @@
     border: none;
     background: #f2f2f2;
     box-sizing: border-box;
+  }
+
+  textarea:focus {
+    padding: 8px 0 10px 16px;
   }
 
   &__title {
@@ -289,16 +307,18 @@
     box-sizing: border-box;
 
     &__item--contacts {
+      position: relative;
       margin-bottom: 19px;
     }
 
     &__item--contacts &__title {
-      position: relative;
       text-align: center;
       padding-bottom: 26px;
     }
 
-    &__item--contacts &__title::before {
+    &__item--contacts &__title::before,
+    &__item--places &__title::before,
+    &__comment &__title::before  {
       content: "";
       position: absolute;
       width: 126px;
@@ -308,7 +328,9 @@
       background: #e5e5e5;
     }
 
-    &__item--contacts &__title::after {
+     &__item--contacts &__title::after,
+    &__item--places &__title::after,
+    &__comment &__title::after {
       content: "";
       position: absolute;
       width: 126px;
@@ -320,7 +342,6 @@
 
     &__item--personality {
       flex-basis: 324px;
-      position: relative;
       margin-bottom: 26px;
       box-sizing: border-box;
     }
@@ -455,12 +476,14 @@
     }
 
     &__title {
+      position: relative;
       text-align: left;
       font-size: 21px;
       padding-top: 18px;
     }
 
     &__comment {
+      position: relative;
       width: 960px;
       margin-left: auto;
       margin-right: auto;
@@ -473,14 +496,17 @@
       padding: 15px 0 0 22px;
     }
 
+    textarea:focus {
+      padding: 11px 0 0 18px;
+    }
+
     &__comment &__title {
       text-align: center;
-      padding-right: 8px;
       margin-bottom: 38px;
     }
 
     &__footnote {
-      margin-top: 18px;
+      margin-top: 20px;
     }
   }
 
@@ -506,6 +532,11 @@
 
     &__item--places {
       padding: 30px 0 18px 0;
+    }
+
+    &__item--places &__title {
+      width: 960px;
+      padding: 10px 280px;
     }
 
     &__inner--contacts {
@@ -602,6 +633,30 @@
 
     &__comment {
       margin-bottom: 52px;
+    }
+
+    &__item--contacts &__title::before,
+    &__item--places &__title::before,
+    &__comment &__title::before {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 1px;
+      left: 70.9%;
+      top: 30px;
+      background: #e5e5e5;
+    }
+
+    &__item--contacts &__title::after,
+    &__item--places &__title::after,
+    &__comment &__title::after {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 1px;
+      left: 0;
+      top: 30px;
+      background: #e5e5e5;
     }
   }
 }
