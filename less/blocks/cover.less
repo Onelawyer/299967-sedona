@@ -55,7 +55,11 @@
     background-position: bottom;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background: url("../img/bg-back-mobile@2x.jpg");
+      width: 320px;
+      height: 389px;
+      background: url("../img/bg-intro-triangle-mobile.svg") no-repeat, url("../img/bg-back-mobile@2x.jpg");
+      background-size: auto 389px;
+      background-position: bottom;
     }
   }
 
