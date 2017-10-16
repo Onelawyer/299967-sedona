@@ -6,17 +6,27 @@
   &__title {
     .font-title();
     font-size: 21px;
-    margin-bottom: 30px;
+    margin: 25px 0 20px 0;
   }
 
   &__description {
     .font-text();
-    margin-bottom: 40px;
+    line-height: 24px;
+    padding: 0 20px;
+    margin-bottom: 36px;
   }
 
   &__btn {
-    .button ();
+    width: 280px;
     margin-bottom: 50px;
+  }
+
+  &__btn:hover {
+    background: #669ec0;
+  }
+
+  &__btn:active {
+    background: #5496bd;
   }
 
   @media @tablet-widths {
@@ -25,20 +35,37 @@
     width: 460px;
     justify-content: center;
     .content-padding--desktop();
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 
     &__title {
       .font-title--desktop();
       font-size: 30px;
+      margin: 25px 0 18px 0;
     }
 
     &__description {
       line-height: 24px;
+      margin-bottom: 42px;
+      padding: 0;
     }
 
     &__description span {
       display: block;
+    }
+
+    &__btn {
+      width: 480px;
+      margin-bottom: 56px;
+    }
+  }
+
+  @media @desktop-widths {
+    &__description {
+      margin-bottom: 48px;
+    }
+
+    &__btn {
+      margin-bottom: 64px;
     }
   }
 }

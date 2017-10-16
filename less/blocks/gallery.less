@@ -1,47 +1,50 @@
 .gallery {
   .container();
   text-align: center;
+  margin-bottom: 30px;
 
   &__item {
     margin: 0;
-    padding-bottom: 25px;
     padding-top: 22px;
     border-bottom: 1px solid #e5e5e5;
   }
 
-  &__item:nth-child(1) {
-    height: 400px;
-  }
-
   &__like-block {
     .flex();
-    align-items: flex-end;
+    height: 36px;
+    align-items: center;
+    justify-content: flex-start;
   }
 
   &__like {
     .font-text;
+    line-height: 22px;
     font-weight: bold;
     margin: 0;
   }
 
   &__description {
-    .content-padding();
+    padding: 0 20px 13px 20px;
   }
 
   &__title {
     .font-text;
+    line-height: 24px;
     font-weight: bold;
     text-align: left;
+    margin-bottom: 0;
   }
 
   &__autor {
     .font-text;
+    line-height: 24px;
     text-transform: none;
     text-align: left;
+    margin: 0;
   }
 
   &__btn {
-    width: 40px;
+    width: 38px;
     border: none;
     background: none;
     padding: 0;
@@ -53,9 +56,12 @@
     flex-wrap: wrap;
     padding: 0 60px 0 60px;
     box-sizing: border-box;
+    margin-bottom: 66px;
 
     &__description {
       .flex();
+      min-height: 80px;
+      padding: 0;
       justify-content: space-between;
       align-items: center;
       background-color: @light-bg-color;
@@ -66,11 +72,13 @@
       height: auto;
       position: relative;
       padding: 0;
+      border: none;
+    }
 
-      & picture > img {
-        width: 324px;
-        height: 267px;
-      }
+    &__img {
+      display: block;
+      width: 324px;
+      height: 267px;
     }
 
     &__item:nth-child(1) {
@@ -79,6 +87,7 @@
     }
 
     &__item:nth-child(1) picture > img {
+      display: block;
       width: 648px;
       height: 400px;
     }
@@ -87,16 +96,29 @@
       color: @black-color;
     }
 
+    &__like-block {
+      align-items: center;
+      width: 90px;
+      justify-content: flex-start;
+    }
+
+    &__btn {
+      padding: 0 0 0 5px;
+    }
+
     &__title {
       .font-text();
       color: @black-color;
       font-weight: bold;
       line-height: 24px;
+      padding-left: 21px;
+      margin: 0;
     }
 
     &__autor {
       color: @grey-color;
       line-height: 24px;
+      padding-left: 21px;
     }
   }
 
@@ -104,6 +126,7 @@
     .flex();
     flex-wrap: wrap;
     .content-padding--desktop();
+    margin-bottom: 70px;
 
     &__item:nth-child(1) {
       width: 1200px;
@@ -119,7 +142,7 @@
       justify-content: space-between;
       align-items: center;
       position: absolute;
-      bottom: 3px;
+      bottom: 0;
       left: 0;
       width: 100%;
       background-color: @black-color-opacity;

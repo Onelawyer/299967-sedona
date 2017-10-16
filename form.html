@@ -2,12 +2,16 @@
 <html lang="ru">
 
 <head>
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement("picture");
+  </script>
+  <script src="js/picturefill.js" async></script>
   <meta charset="utf-8">
   <meta name="format-detection" content="telephone=no">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Седона</title>
-  <link href="css/style.css" rel="stylesheet">
-  <link href="css/normalize.css" rel="stylesheet"> </head>
+  <link href="css/style.css" rel="stylesheet"> </head>
 
 <body>
   <header class="page-header">
@@ -15,7 +19,7 @@
       <ul class="main-nav__list">
         <li class="main-nav__item main-nav__item--active"><a class="main-nav__link" href="index.html">главная</a></li>
         <li class="main-nav__item"><a class="main-nav__link" href="photo.html">фото и видео</a></li>
-        <li class="main-nav__item main-nav__item--active"><a class="main-nav__link" href="#">форма отзыва</a></li>
+        <li class="main-nav__item main-nav__item--active"><a class="main-nav__link main-nav__link--active" href="#">форма отзыва</a></li>
         <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru">html academy</a></li>
       </ul>
       <button class="main-nav__toggle" type="button">Закрыть меню</button>
@@ -29,9 +33,12 @@
             <rect y="18.018" width="22.928" height="3.964" /> </g>
         </svg>
       </button>
-      <div class="logo">
-        <a class="logo__link" title="Sedona"><img class="logo__img" src="img/logo-sedona-mobile.svg" alt="Sedona" width="102" height="83"></a>
-      </div>
+      <a class="logo" href="index.html" title="Sedona">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+          <source media="(min-width: 320px)" srcset="img/logo-sedona-mobile.svg"> <img class="logo__img" src="img/logo-sedona-mobile.svg" alt="Sedona" width="102" height="84"> </picture>
+      </a>
     </div>
   </header>
   <section class="cover cover--form">
@@ -43,25 +50,25 @@
   </section>
   <form class="review" action="https://echo.htmlacademy.ru/" method="get">
     <fieldset class="review__item review__item--personality">
-      <legend class="review__title">представьтесь</legend>
+      <legend class="review__title">представьтесь:</legend>
       <div class="review__inner review__inner--personality">
-        <label class="review__label" for="id__name">Имя</label>
+        <label class="review__label" for="id__name">Имя*:</label>
         <input class="review__input review__input--personality" type="text" name="name" id="id__name" placeholder="Петр" required> </div>
       <div class="review__inner review__inner--personality">
-        <label class="review__label" for="id__surname">Фамилия</label>
+        <label class="review__label" for="id__surname">Фамилия*:</label>
         <input class="review__input review__input--personality" type="text" name="surname" id="id__surname" placeholder="Иванов" required> </div>
       <div class="review__inner review__inner--personality">
-        <label class="review__label" for="id__patronymic">Отчество</label>
+        <label class="review__label" for="id__patronymic">Отчество:</label>
         <input class="review__input review__input--personality" type="text" name="patronymic" id="id__patronymic" placeholder="Александрович"> </div>
     </fieldset>
     <fieldset class="review__item review__item--contacts">
-      <legend class="review__title">контактная информация</legend>
+      <legend class="review__title">контактная информация:</legend>
       <div class="review__contacts-wrap">
         <div class="review__inner review__inner--contacts review__inner--tel">
-          <label class="review__label review__label--tel" for="tel"><span>контактный</span> телефон:</label>
+          <label class="review__label review__label--tel" for="tel"><span>контактный</span> телефон*:</label>
           <input class="review__input review__input--contacts" type="tel" name="tel" id="tel" placeholder="Введите телефон" required> </div>
         <div class="review__inner review__inner--contacts review__inner--email">
-          <label class="review__label review__label--email" for="email">электронная почта:</label>
+          <label class="review__label review__label--email" for="email">электронная почта*:</label>
           <input class="review__input review__input--contacts" type="email" name="email" id="email" placeholder="Введите e-mail" required> </div>
       </div>
     </fieldset>
@@ -85,7 +92,7 @@
       <div class="review__places-wrap">
         <div class="review__inner review__inner--places">
           <input class="review__input-checkbox review__input-checkbox--checked" type="checkbox" name="Слайдер" checked id="checkbox-1">
-          <label class="review__label-checkbox" for="checkbox-1">Мост дьявола</label>
+          <label class="review__label-checkbox" for="checkbox-1">Мост Дьявола</label>
         </div>
         <div class="review__inner review__inner--places">
           <input class="review__input-checkbox review__input-checkbox--checked" type="checkbox" name="Слайдер" checked id="checkbox-2">
@@ -93,7 +100,7 @@
         </div>
         <div class="review__inner review__inner--places">
           <input class="review__input-checkbox" type="checkbox" name="Слайдер" id="checkbox-3">
-          <label class="review__label-checkbox" for="checkbox-3">Гора-колокол</label>
+          <label class="review__label-checkbox" for="checkbox-3">Гора-Колокол</label>
         </div>
         <div class="review__inner review__inner--places">
           <input class="review__input-checkbox review__input-checkbox--checked" type="checkbox" name="Слайдер" checked id="checked-4">
@@ -102,12 +109,12 @@
       </div>
     </fieldset>
     <fieldset class="review__item review__comment">
-      <legend class="review__title">опишите свои эмоции</legend>
-      <textarea name="comment" id="comment-field" rows="10">Опишите подробно все свои восторги</textarea>
+      <legend class="review__title">опишите свои эмоции:</legend>
+      <textarea name="comment" id="comment-field" rows="5">Опишите подробно все свои восторги</textarea>
     </fieldset>
     <div class="review__btn-wrap">
       <input class="btn review__btn" type="submit" value="Отправить отзыв">
-      <p class="review__footnote"><sup>*</sup> &#8211; обязательные поля</p>
+      <p class="review__footnote">* &#8211; обязательные поля</p>
     </div>
   </form>
   <footer class="page-footer">
@@ -131,7 +138,10 @@
       </a>
     </div>
     <div class="copyright"><span>разработано</span>
-      <a class="copyright__link" href="https://htmlacademy.ru/"><img class="copyright__img" src="img/logo-htmlacademy.svg" width="27" height="34" alt="html-academy"></a>
+      <a class="copyright__link" href="https://htmlacademy.ru/">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+          <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z" /> </svg>
+      </a>
     </div>
   </footer>
   <script>

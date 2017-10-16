@@ -1,9 +1,10 @@
 .recommendations {
   .container();
-  .content-padding();
+  padding: 0 20px 0 20px;
   text-align: left;
-  padding-top: 13px;
-  margin-bottom: 40px;
+  padding-top: 17px;
+  margin-bottom: 38px;
+  box-sizing: border-box;
 
   &__title {
     .font-title();
@@ -14,6 +15,10 @@
     .font-text();
     margin-bottom: 28px;
     line-height: 21px;
+  }
+
+  &__description br {
+    display: none;
   }
 
   &__wrap {
@@ -54,10 +59,12 @@
 
   @media @tablet-widths {
     .content-padding--desktop();
+    padding: 0;
+    margin-bottom: 8px;
 
     &__title {
       .font-title--desktop();
-      margin-top: 0;
+      margin: 0 0 23px 0;
     }
 
     &__wrap {
@@ -71,7 +78,7 @@
       flex-wrap: wrap;
       width: 400px;
       justify-content: center;
-      padding: 165px 36px 65px 36px;
+      padding: 157px 45px 55px 45px;
       box-sizing: border-box;
     }
 
@@ -83,7 +90,7 @@
     &__item--home::before {
       background-size: 75px 72px;
       left: 90px;
-      top: 70px;
+      top: 60px;
       width: 80px;
       height: 80px;
     }
@@ -94,20 +101,21 @@
 
     &__item--gifts::before {
       background-size: 64px 75px;
-      left: 90px;
-      top: 70px;
+      left: 91px;
+      top: 57px;
       width: 80px;
       height: 80px;
     }
 
     &__item--food {
       order: 1;
+      padding: 157px 52px 55px 52px;
     }
 
     &__item--food::before {
       background-size: 77px 68px;
-      left: 90px;
-      top: 70px;
+      left: 92px;
+      top: 62px;
       width: 80px;
       height: 80px;
     }
@@ -115,7 +123,7 @@
 
   @media @desktop-widths {
     &__item {
-      padding: 160px 70px 85px 70px;
+      padding: 159px 50px 74px 50px;
     }
 
     &__item--home::before {
@@ -128,6 +136,10 @@
 
     &__item--food::before {
       left: 165px;
+    }
+
+    &__description br {
+      display: block;
     }
   }
 }
