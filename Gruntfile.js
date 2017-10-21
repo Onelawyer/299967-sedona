@@ -1,143 +1,141 @@
 "use strict";
 
+module.exports = function(grunt) {
+	require("load-grunt-tasks")(grunt);
 
-module.exports = function (grunt) {
-  require("load-grunt-tasks")(grunt);
+	grunt.initConfig({
+		less: {
+			style: {
+				files: {
+					"build/css/style.css": "less/style.less"
+				}
+			}
+		},
 
-  grunt.initConfig({
-    less: {
-      style: {
-        files: {
-          "build/css/style.css": "less/style.less"
-        }
-      }
-    },
+		postcss: {
+			style: {
+				options: {
+					processors: [require("autoprefixer")()]
+				},
+				src: "build/css/*.css"
+			}
+		},
 
-    postcss: {
-      style: {
-        options: {
-          processors: [
-            require("autoprefixer")()
-          ]
-        },
-        src: "build/css/*.css"
-      }
-    },
+		browserSync: {
+			server: {
+				bsFiles: {
+					src: ["build/*.html", "build/css/*.css"]
+				},
+				options: {
+					server: "build/",
+					watchTask: true,
+					notify: false,
+					open: true,
+					cors: true,
+					ui: false
+				}
+			}
+		},
+		copy: {
+			build: {
+				files: [
+					{
+						expand: true,
+						src: [
+							"fonts/**/*.{woff,woff2}", "img/**", "js/**"
+						],
+						dest: "build"
+					}
+				]
+			}
+		},
 
-    browserSync: {
-      server: {
-        bsFiles: {
-          src: [
-            "build/*.html",
-            "build/css/*.css"
-          ]
-        },
-        options: {
-          server: "build/",
-          watchTask: true,
-          notify: false,
-          open: true,
-          cors: true,
-          ui: false
-        }
-      }
-    },
+		clean: {
+			build: ["build"]
+		},
 
-    copy: {
-      build: {
-        files: [{
-          expand: true,
-          src: [
-            "fonts/**/*.{woff,woff2}",
-            "img/**",
-            "js/**"
-          ],
-          dest: "build"
-        }]
-      }
-    },
+		watch: {
+			html: {
+				files: ["*.html"],
+				tasks: ["posthtml"]
+			},
+			style: {
+				files: ["less/**/*.less"],
+				tasks: ["less", "postcss", "csso"]
+			}
+		},
 
-    clean: {
-      build: ["build"]
-    },
+		csso: {
+			style: {
+				options: {
+					report: "gzip"
+				},
+				files: {
+					"build/css/style.min.css": ["build/css/style.css"]
+				}
+			}
+		},
 
-    watch: {
-      html: {
-        files: ["*.html"],
-        tasks: ["posthtml"]
-      },
-      style: {
-        files: ["less/**/*.less"],
-        tasks: ["less", "postcss", "csso"]
-      }
-    },
+		imagemin: {
+			images: {
+				options: {
+					optimizationLevel: 3,
+					progressive: true
+				},
+				files: [
+					{
+						expand: true,
+						src: ["img/**/*.{png,jpg,svg}"],
+                        dest: "build"
+					}
+				]
+			}
+		},
 
-     csso: {
-       style: {
-          options: {
-            report: "gzip"
-          },
-          files: {
-            "build/css/style.min.css": ["build/css/style.css"]
-            }
-         }
-       },
+		cwebp: {
+			images: {
+				options: {
+					q: 90
+				},
+				files: [
+					{
+						expand: true,
+						src: ["img/**/*.{png,jpg}"],
+                        dest: "build"
+					}
+				]
+			}
+		},
 
-    imagemin: {
-      images: {
-        options: {
-          optimizationLevel: 3,
-          progressive: true
-          },
-         files: [{
-           expand: true,
-           src: ["img/**/*.{png,jpg,svg}"]
-           }]
-        }
-      },
+		svgstore: {
+			options: {
+				includeTitleElement: false
+			},
+			sprite: {
+				files: {
+					"build/img/sprite.svg": ["img/icon-*.svg"]
+				}
+			}
+		},
 
-     cwebp: {
-        images: {
-          options: {
-            q: 90
-            },
-          files: [{
-            expand: true,
-            src: ["img/**/*.{png,jpg}"]
-            }]
-          }
-       },
+		posthtml: {
+			options: {
+				use: [require("posthtml-include")()]
+			},
 
-     svgstore: {
-       options: {
-         includeTitleElement: false
-         },
-       sprite: {
-         files: {
-           "build/img/sprite.svg": ["img/icon-*.svg"]
-         }
-       }
-     },
+			build: {
+				files: [
+					{
+						expand: true,
+						src: ["*.html"],
+						dest: "build"
+					}
+				]
+			}
+		}
+	});
 
-    posthtml: {
-      options: {
-        use: [
-          require("posthtml-include")()
-          ]
-        },
-
-    html: {
-         files: [{
-           expand: true,
-           src: ["*.html"]
-           dest: "build"
-         }]
-      }
-    },
-
-  });
-
-  grunt.registerTask("serve", ["browserSync", "watch"]);
-  grunt.registerTask("build", ["less", "postcss", "csso", "svgstore", "posthtml"]);
+	grunt.registerTask("serve", ["browserSync", "watch"]);
+	grunt.registerTask("build", ["clean", "copy", "less", "postcss", "csso", "svgstore", "posthtml", "imagemin", "cwebp"]);
 
 };
