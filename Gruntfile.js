@@ -93,8 +93,8 @@ module.exports = function (grunt) {
             expand: true
             , src: ["img/**/*.{png,jpg}"]
             , dest: "build"
-					}
-				]
+          }
+        ]
       }
     }
     , svgstore: {
@@ -117,8 +117,8 @@ module.exports = function (grunt) {
             expand: true
             , src: ["*.html"]
             , dest: "build"
-					}
-				]
+          }
+        ]
       }
     }
   });
