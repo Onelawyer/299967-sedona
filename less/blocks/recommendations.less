@@ -32,12 +32,13 @@
   &__item::before {
     content: "";
     position: absolute;
-    width: 50px;
+    width: 45px;
     height: 50px;
   }
 
   &__item--home::before {
     background: url("../img/icon-house.svg") no-repeat;
+    background-color: white;
     left: -50px;
     top: -10px;
     background-size: auto 38px;
@@ -45,6 +46,7 @@
 
   &__item--gifts::before {
     background: url("../img/icon-gift.svg") no-repeat;
+    background-color: white;
     left: -45px;
     top: -12px;
     background-size: auto 40px;
@@ -52,6 +54,7 @@
 
   &__item--food::before {
     background: url("../img/icon-burger.svg") no-repeat;
+    background-color: white;
     background-size: auto 36px;
     left: -52px;
     top: -6px;
@@ -69,6 +72,7 @@
 
     &__wrap {
       .flex();
+      flex-wrap: wrap;
       justify-content: space-between;
       .content-padding--desktop();
     }
@@ -76,7 +80,7 @@
     &__item {
       .flex();
       flex-wrap: wrap;
-      width: 400px;
+      width: 256px;
       justify-content: center;
       padding: 157px 45px 55px 45px;
       box-sizing: border-box;
@@ -123,6 +127,7 @@
 
   @media @desktop-widths {
     &__item {
+      width: 400px;
       padding: 159px 50px 74px 50px;
     }
 

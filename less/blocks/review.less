@@ -229,7 +229,8 @@
     left: 242px;
     width: 58px;
     height: 58px;
-    background: url("../img/icon-phone.svg") #e6e6e6 no-repeat;
+    background: url("../img/icon-phone.svg") no-repeat;
+    background-color: #e6e6e6;
     background-position: center;
     z-index: 100;
   }
@@ -241,7 +242,8 @@
     left: 242px;
     width: 58px;
     height: 58px;
-    background: url("../img/icon-mail.svg") #e6e6e6 no-repeat;
+    background: url("../img/icon-mail.svg") no-repeat;
+    background-color: #e6e6e6;
     background-position: center;
     z-index: 100;
   }
@@ -249,14 +251,6 @@
   &__btn {
     width: 280px;
     margin-bottom: 70px;
-  }
-
-  &__btn:hover {
-    background: #669ec0;
-  }
-
-  &__btn:active {
-    background: #5496bd;
   }
 
   &__btn-wrap {
@@ -574,12 +568,12 @@
     }
 
     &__input--contacts[name="email"] {
-      width: 315px;
+      max-width: 315px;
       flex-basis: 315px;
     }
 
     &__input--contacts[name="tel"] {
-      width: 315px;
+      max-width: 315px;
       flex-basis: 315px;
     }
 
