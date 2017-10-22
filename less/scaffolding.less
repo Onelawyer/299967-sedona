@@ -11,14 +11,22 @@ body {
   border-radius: 0;
   box-sizing: border-box;
   padding: 0;
+
+    &:hover {
+    background: #669ec0;
+  }
+
+  &:active {
+    background: #5496bd;
+  }
 }
 
 @font-face {
   font-family: "ptsansbold";
-  src: local("PT Sans"), local("PTSans"), url("../fonts/ptsansbold.woff2") format("woff2");
+  src: local("PT Sans"), local("PTSans"), url("../fonts/ptsansbold.woff2") format("woff2"), url("../fonts/ptsansbold.woff") format("woff");
 }
 
 @font-face {
   font-family: "ptsans";
-  src: local("PT Sans"), local("PTSans"), url("../fonts/ptsans.woff2") format("woff2");
+  src: local("PT Sans"), local("PTSans"), url("../fonts/ptsans.woff2") format("woff2"), url("../fonts/ptsans.woff") format("woff");
 }

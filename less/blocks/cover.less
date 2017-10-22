@@ -55,6 +55,7 @@
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background: url("../img/bg-intro-triangle-mobile.svg") no-repeat, url("../img/bg-back-mobile@2x.jpg");
+      background-color: #747a7e;
       background-size: auto 389px;
       background-position: bottom;
     }
@@ -129,7 +130,7 @@
 
     &__description--form {
       .font-text();
-      width: 440px;
+      width: 450px;
       line-height: 24px;
     }
 
@@ -157,15 +158,10 @@
       margin-bottom: 27px;
     }
 
-    &__text-sedona--photo,
-    &__text-sedona--form {
-      margin-top: 102px;
-    }
-
     &__wrap {
       .flex();
       flex-wrap: wrap;
-      width: 490px;
+      width: 500px;
       padding: 34px 0 36px 0;
     }
 
@@ -190,6 +186,11 @@
       width: 460px;
       padding-bottom: 16px;
       margin: 0 auto;
+    }
+
+    &__text--photo,
+    &__text--form {
+      height: 284px;
     }
 
     &--form {
@@ -234,7 +235,7 @@
     }
 
     &__wrap--form {
-      flex-basis: 440px;
+      flex-basis: 450px;
       padding: 62px 0 21px 0;
     }
   }
