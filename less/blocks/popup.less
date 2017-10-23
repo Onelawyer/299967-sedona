@@ -1,16 +1,20 @@
 .popup {
-  position: absolute;
-  left: 28%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 320px;
-  height: 324px;
-  background: white;
-  box-shadow: -3px 3px 15px rgba(0, 0, 0, 0.15);
-  z-index: 101;
+  display: none;
 
-  &--error {
+  &__item {
+    position: absolute;
+    left: 28%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 320px;
+    height: 324px;
+    background: white;
+    box-shadow: -3px 3px 15px rgba(0, 0, 0, 0.15);
+    z-index: 101;
+  }
+
+  &__item--error {
     position: absolute;
     left: 28%;
     display: flex;
@@ -67,17 +71,15 @@
     width: 180px;
   }
 
-  &__wrap {
-    display: none;
-  }
-
   @media @tablet-widths {
-    width: 645px;
-    height: 350px;
-    background: white;
-    box-shadow: -3px 3px 15px rgba(0, 0, 0, 0.15);
+    &__item {
+      width: 645px;
+      height: 350px;
+      background: white;
+      box-shadow: -3px 3px 15px rgba(0, 0, 0, 0.15);
+    }
 
-    &--error {
+    &__item--error {
       width: 400px;
       height: 348px;
     }
@@ -109,10 +111,6 @@
     &__btn {
       width: 460px;
       margin: auto;
-    }
-
-    &__wrap {
-      display: none;
     }
   }
 }
