@@ -6,7 +6,7 @@
     // Picture element HTML5 shiv
     document.createElement("picture");
   </script>
-<!--  <script src="js/picturefill.js" async=""></script>-->
+  <!--  <script src="js/picturefill.js" async=""></script>-->
   <meta charset="utf-8">
   <meta name="format-detection" content="telephone=no">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -16,6 +16,9 @@
 <body>
   <div style="display:none">
     <include src="build/img/sprite.svg">"</include>"</div>
+  <div class="shadow">
+    <div class="shadow__inner"></div>
+  </div>
   <header class="page-header">
     <nav class="main-nav main-nav--nojs">
       <ul class="main-nav__list">
@@ -25,24 +28,24 @@
         <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru">html academy</a></li>
       </ul>
       <button class="main-nav__toggle" type="button">Закрыть меню</button>
+      <div class="page-header__wrap main-nav__wrap">
+        <button class="main-nav__btn" type="button">
+          <svg version="1.0" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22.928px" height="21.982px" viewBox="0 0 22.928 21.982" enable-background="new 0 0 22.928 21.982" xml:space="preserve">
+            <g>
+              <rect width="22.928" height="3.964"></rect>
+              <rect y="9.009" width="22.928" height="3.964"></rect>
+              <rect y="18.018" width="22.928" height="3.964"></rect>
+            </g>
+          </svg>
+        </button>
+      </div>
     </nav>
-    <div class="main-nav__wrap">
-      <button class="main-nav__btn" type="button">
-        <svg version="1.0" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22.928px" height="21.982px" viewBox="0 0 22.928 21.982" enable-background="new 0 0 22.928 21.982" xml:space="preserve">
-          <g>
-            <rect width="22.928" height="3.964"></rect>
-            <rect y="9.009" width="22.928" height="3.964"></rect>
-            <rect y="18.018" width="22.928" height="3.964"></rect>
-          </g>
-        </svg>
-      </button>
-      <a class="logo" href="index.html" title="Sedona">
-        <picture>
-          <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
-          <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
-          <source media="(min-width: 320px)" srcset="img/logo-sedona-mobile.svg"> <img class="logo__img" src="img/logo-sedona-mobile.svg" alt="Sedona" width="102" height="84"> </picture>
-      </a>
-    </div>
+    <a class="logo" title="Sedona">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+        <source media="(min-width: 320px)" srcset="img/logo-sedona-mobile.svg"> <img class="logo__img" src="img/logo-sedona-mobile.svg" alt="Sedona" width="102" height="84"> </picture>
+    </a>
   </header>
   <section class="cover cover--form">
     <div class="cover__img-block cover__img-block--form"> <img class="cover__text cover__text--form" src="img/text-sedona.svg" alt="Sedona"> </div>
@@ -119,8 +122,8 @@
       <input class="btn review__btn" type="submit" value="Отправить отзыв">
       <p class="review__footnote">* &#8211; обязательные поля</p>
     </div>
-    <div class="popup__wrap">
-      <div class="popup popup--confirmation">
+    <section class="popup">
+      <div class="popup__item">
         <h3 class="popup__title">ваш отзыв отправлен</h3>
         <p class="popup__description">спасибо за ваше участие, ваш отзыв уже поступил к нам.
           <br> в ближайшее время мы опубликуем его на сайте.</p>
@@ -128,12 +131,12 @@
           <button class="btn popup__btn">закрыть окно</button>
         </div>
       </div>
-      <div class="popup popup--error">
+      <div class="popup__item popup__item--error">
         <h3 class="popup__title popup__title--error">что-то пошло не так!</h3>
         <p class="popup__description popup__description--error">проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
         <button class="btn popup__btn--error">ок</button>
       </div>
-    </div>
+    </section>
   </form>
   <footer class="page-footer">
     <div class="page-footer__hash-tag">#visitsedona</div>

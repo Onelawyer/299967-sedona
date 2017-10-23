@@ -6,7 +6,7 @@
     // Picture element HTML5 shiv
     document.createElement("picture");
   </script>
-<!--  <script src="js/picturefill.js" async=""></script>-->
+  <!--  <script src="js/picturefill.js" async=""></script>-->
   <meta charset="utf-8">
   <meta name="format-detection" content="telephone=no">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -16,33 +16,36 @@
 <body>
   <div style="display:none">
     <include src="build/img/sprite.svg">"</include>"</div>
+  <div class="shadow">
+    <div class="shadow__inner"></div>
+  </div>
   <header class="page-header">
-    <nav class="main-nav main-nav--nojs">
-      <ul class="main-nav__list">
+    <nav class="main-nav">
+      <ul class="main-nav__list main-nav__list--nojs">
         <li class="main-nav__item main-nav__item--active"><a class="main-nav__link main-nav__link--active">главная</a></li>
         <li class="main-nav__item"><a class="main-nav__link" href="photo.html">фото и видео</a></li>
         <li class="main-nav__item"><a class="main-nav__link" href="form.html">форма отзыва</a></li>
         <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru">html academy</a> </li>
       </ul>
       <button class="main-nav__toggle" type="button">Закрыть меню</button>
+      <div class="page-header__wrap main-nav__wrap">
+        <button class="main-nav__btn" type="button">
+          <svg version="1.0" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22.928px" height="21.982px" viewBox="0 0 22.928 21.982" enable-background="new 0 0 22.928 21.982" xml:space="preserve">
+            <g>
+              <rect width="22.928" height="3.964"></rect>
+              <rect y="9.009" width="22.928" height="3.964"></rect>
+              <rect y="18.018" width="22.928" height="3.964"></rect>
+            </g>
+          </svg>
+        </button>
+      </div>
     </nav>
-    <div class="main-nav__wrap">
-      <button class="main-nav__btn" type="button">
-        <svg version="1.0" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22.928px" height="21.982px" viewBox="0 0 22.928 21.982" enable-background="new 0 0 22.928 21.982" xml:space="preserve">
-          <g>
-            <rect width="22.928" height="3.964"></rect>
-            <rect y="9.009" width="22.928" height="3.964"></rect>
-            <rect y="18.018" width="22.928" height="3.964"></rect>
-          </g>
-        </svg>
-      </button>
-      <a class="logo" title="Sedona">
-        <picture>
-          <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
-          <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
-          <source media="(min-width: 320px)" srcset="img/logo-sedona-mobile.svg"> <img class="logo__img" src="img/logo-sedona-mobile.svg" alt="Sedona" width="102" height="84"> </picture>
-      </a>
-    </div>
+    <a class="logo" title="Sedona">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+        <source media="(min-width: 320px)" srcset="img/logo-sedona-mobile.svg"> <img class="logo__img" src="img/logo-sedona-mobile.svg" alt="Sedona" width="102" height="84"> </picture>
+    </a>
   </header>
   <section class="cover">
     <div class="cover__img-block"> <img class="cover__text" src="img/text-sedona-index.svg" alt="Sedona"></div>
@@ -117,7 +120,7 @@
   <section class="map">
     <iframe class="map__img" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3381007.614354739!2d-114.17492744944197!3d34.152347533041976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b08ebcb4c186b%3A0x423927b17fc1cd71!2z0JDRgNC40LfQvtC90LAsINCh0KjQkA!5e0!3m2!1sru!2sru!4v1497569079986" style="border:0" allowfullscreen=""></iframe>
   </section>
-<footer class="page-footer">
+  <footer class="page-footer">
     <div class="page-footer__hash-tag">#visitsedona</div>
     <div class="social-btn">
       <a class="social-btn__link social-btn__link--twitter" href="#" title="Твиттер">
@@ -145,20 +148,20 @@
     </div>
   </footer>
   <script>
-    var navMain = document.querySelector('.main-nav');
+    var navMain = document.querySelector('.main-nav__list');
     var navToggle = document.querySelector('.main-nav__toggle');
     var navButton = document.querySelector('.main-nav__btn');
     navMain.classList.remove('main-nav--nojs');
     navToggle.addEventListener('click', function () {
-      if (navMain.classList.contains('main-nav')) {
-        navMain.classList.add('main-nav--closed');
-        navMain.classList.remove('main-nav--opened');
+      if (navMain.classList.contains('main-nav__list')) {
+        navMain.classList.add('main-nav__list--closed');
+        navMain.classList.remove('main-nav__list--opened');
       }
     });
     navButton.addEventListener('click', function () {
-      if (navMain.classList.contains('main-nav--closed')) {
-        navMain.classList.remove('main-nav--closed');
-        navMain.classList.add('main-nav--opened');
+      if (navMain.classList.contains('main-nav__list--closed')) {
+        navMain.classList.remove('main-nav__list--closed');
+        navMain.classList.add('main-nav__list--opened');
       }
     });
   </script>
