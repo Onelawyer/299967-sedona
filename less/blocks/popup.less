@@ -4,6 +4,7 @@
   &__item {
     position: absolute;
     left: 28%;
+    top: 200%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -17,6 +18,7 @@
   &__item--error {
     position: absolute;
     left: 28%;
+    top: 200%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -41,11 +43,11 @@
     text-align: center;
     flex-basis: 230px;
     line-height: 26px;
-    margin: 48px 0 40px 0;
+    margin: 45px 0 30px 0;
   }
 
   &__title--error {
-    margin: 40px 0 35px 0;
+    margin: 40px 0 14px 0;
   }
 
   &__description {
@@ -53,22 +55,23 @@
     .font-text();
     line-height: 24px;
     text-align: center;
-    margin: 0 0 40px 0;
+    margin: 0 0 30px 0;
   }
 
   &__description--error {
     flex-basis: 320px;
     padding: 0 45px;
-    margin: 0 0 30px 0;
+    margin: 0;
   }
 
   &__btn {
     width: 280px;
-    margin: auto;
+    margin: 0 auto;
   }
 
   &__btn--error {
     width: 180px;
+    margin: 0 auto;
   }
 
   @media @tablet-widths {
@@ -98,10 +101,15 @@
 
     &__title--error {
       flex-basis: 250px;
+      margin: 58px 0 5px 0;
     }
 
     &__description {
       flex-basis: 420px;
+    }
+
+    &__description--error {
+      margin: 0 0 5px 0;
     }
 
     &__description br {
@@ -111,6 +119,11 @@
     &__btn {
       width: 460px;
       margin: auto;
+    }
+
+    &__btn--error {
+      width: 272px;
+      margin: 0 auto;
     }
   }
 }
